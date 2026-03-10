@@ -36,6 +36,15 @@ const ContactSection = () => {
             <div className="space-y-4">
               <div className="flex items-center gap-4">
                 <div className="w-10 h-10 rounded-full bg-card flex items-center justify-center">
+                  <Phone className="w-4 h-4 text-accent" />
+                </div>
+                <div>
+                  <div className="text-xs text-muted-foreground">Phone</div>
+                  <div className="text-sm font-medium text-foreground">+91 9039075049</div>
+                </div>
+              </div>
+              <div className="flex items-center gap-4">
+                <div className="w-10 h-10 rounded-full bg-card flex items-center justify-center">
                   <Globe className="w-4 h-4 text-accent" />
                 </div>
                 <div>
@@ -50,6 +59,17 @@ const ContactSection = () => {
                 <div>
                   <div className="text-xs text-muted-foreground">Email</div>
                   <div className="text-sm font-medium text-foreground">solarsysllp@gmail.com</div>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-full bg-card flex items-center justify-center shrink-0">
+                  <MapPin className="w-4 h-4 text-accent" />
+                </div>
+                <div>
+                  <div className="text-xs text-muted-foreground">Address</div>
+                  <div className="text-sm font-medium text-foreground">
+                    Flat2 Block 12 Shalimar Enclave Arera Colony E-3 Sector Huzur M.P. Bhopal 462016
+                  </div>
                 </div>
               </div>
             </div>
