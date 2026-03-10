@@ -11,17 +11,17 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center relative z-10">
         {/* Left: Text */}
         <div className="space-y-6 opacity-0 animate-fade-up">
-          <div className="inline-block px-4 py-1.5 rounded-full border border-border bg-card text-xs font-medium text-muted-foreground tracking-wide uppercase">
-            Powering Tomorrow's Infrastructure
+           <div className="inline-block px-4 py-1.5 rounded-full border border-border bg-card text-xs font-medium text-muted-foreground tracking-wide uppercase">
+            Reliable Solar Energy Solutions
           </div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold leading-[1.1] text-foreground">
-            Clean Energy for a{" "}
-            <span className="photon-gradient-text">Sustainable</span> Future
+            Powering a{" "}
+            <span className="photon-gradient-text">Greener</span> Tomorrow with Solar Energy
           </h1>
           <p className="text-lg text-muted-foreground max-w-lg leading-relaxed">
-            SOLARSYS LLP delivers precision-engineered solar infrastructure for
-            commercial and residential properties — maximizing efficiency, minimizing
-            environmental impact.
+            SOLARSYS LLP is your trusted partner in harnessing the power of the sun.
+            We design, install, and maintain high-performance solar energy systems
+            for homes, businesses, and industries across the region.
           </p>
           <div className="flex flex-wrap gap-4 pt-2">
             <a href="#contact">
