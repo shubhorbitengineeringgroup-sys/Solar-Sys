@@ -1,9 +1,10 @@
-import { Zap, Shield, TrendingUp } from "lucide-react";
+import { Zap, Shield, TrendingUp, Target } from "lucide-react";
 
 const stats = [
   { icon: Zap, value: "500+", label: "Installations" },
   { icon: Shield, value: "15+", label: "Years Experience" },
   { icon: TrendingUp, value: "98%", label: "Client Satisfaction" },
+  { icon: Target, value: "50MW+", label: "Capacity Deployed" },
 ];
 
 const AboutSection = () => {
@@ -13,24 +14,29 @@ const AboutSection = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="space-y-6">
             <h2 className="text-3xl sm:text-4xl font-heading font-bold text-foreground">
-              Engineering the Future of{" "}
-              <span className="photon-gradient-text">Solar Energy</span>
+              About{" "}
+              <span className="photon-gradient-text">SOLARSYS LLP</span>
             </h2>
             <p className="text-muted-foreground leading-relaxed">
-              SOLARSYS LLP is a leading provider of precision solar energy
-              infrastructure. We specialize in the design, installation, and
-              maintenance of high-performance photovoltaic systems for commercial
-              and residential properties.
+              SOLARSYS LLP is a premier solar energy company dedicated to accelerating the
+              transition to clean, renewable power. We specialize in the design, engineering,
+              installation, and maintenance of advanced photovoltaic systems for residential,
+              commercial, and industrial clients.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              Our engineering-first approach ensures every installation maximizes
-              energy output while integrating seamlessly with existing
-              architectural structures. We don't just install panels — we build
-              energy infrastructure that lasts decades.
+              <strong className="text-foreground">Our Mission:</strong> To make solar energy
+              accessible, affordable, and reliable for everyone — empowering communities to
+              reduce their carbon footprint and achieve energy independence.
+            </p>
+            <p className="text-muted-foreground leading-relaxed">
+              <strong className="text-foreground">Our Vision:</strong> A future where every
+              rooftop generates clean energy, and sustainable power is the standard — not the
+              exception. We are committed to building solar infrastructure that lasts decades
+              and delivers measurable environmental and financial returns.
             </p>
           </div>
 
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-cols-2 gap-4">
             {stats.map((stat) => (
               <div
                 key={stat.label}

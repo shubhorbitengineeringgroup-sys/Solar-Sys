@@ -27,8 +27,9 @@ const ContactSection = () => {
                 Get in <span className="photon-gradient-text">Touch</span>
               </h2>
               <p className="text-muted-foreground">
-                Ready to power your property with solar? Request a quote or
-                reach out with any questions.
+                Ready to switch to solar energy? Contact us today for a free
+                consultation, site assessment, or custom quote. Our team is here
+                to answer all your questions.
               </p>
             </div>
 
