@@ -6,10 +6,12 @@ const Footer = () => {
           <div className="font-heading text-xl font-bold tracking-tight">
             SOLAR<span className="photon-gradient-text">SYS</span>
           </div>
-          <div className="flex gap-8 text-sm text-primary-foreground/60">
+          <div className="flex flex-wrap justify-center gap-8 text-sm text-primary-foreground/60">
             <a href="#about" className="hover:text-primary-foreground transition-colors">About</a>
-            <a href="#services" className="hover:text-primary-foreground transition-colors">Services</a>
+            <a href="#products" className="hover:text-primary-foreground transition-colors">Products</a>
             <a href="#projects" className="hover:text-primary-foreground transition-colors">Projects</a>
+            <a href="#why-us" className="hover:text-primary-foreground transition-colors">Why Us</a>
+            <a href="#services" className="hover:text-primary-foreground transition-colors">Services</a>
             <a href="#contact" className="hover:text-primary-foreground transition-colors">Contact</a>
           </div>
         </div>

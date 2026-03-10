@@ -119,4 +119,37 @@
   .section-divider {
     border-top: 1px solid hsl(var(--primary) / 0.08);
   }
+
+  /* Pill Button Styles */
+  .get-quote-pill {
+    background: linear-gradient(135deg, #f7a602 0%, #ffc102 100%);
+    color: white !important;
+    border-radius: 9999px;
+    padding: 0.6rem 1.8rem;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(247, 166, 2, 0.25);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 2px solid transparent;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+  }
+
+  .get-quote-pill:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(247, 166, 2, 0.35);
+    filter: brightness(1.05);
+  }
+
+  .get-quote-pill:active {
+    transform: translateY(1px);
+  }
+
+  .get-quote-pill.active {
+    background: linear-gradient(135deg, #e69500 0%, #edb400 100%);
+    box-shadow: 0 0 0 3px rgba(247, 166, 2, 0.3);
+    border-color: white;
+  }
 }
