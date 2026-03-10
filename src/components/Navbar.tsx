@@ -7,9 +7,10 @@ const Navbar = () => {
 
   const links = [
     { label: "About", href: "#about" },
-    { label: "Services", href: "#services" },
+    { label: "Products", href: "#products" },
     { label: "Projects", href: "#projects" },
     { label: "Why Us", href: "#why-us" },
+    { label: "Services", href: "#services" },
     { label: "Contact", href: "#contact" },
   ];
 
