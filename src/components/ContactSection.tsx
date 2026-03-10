@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Mail, Globe, Send } from "lucide-react";
+import { Mail, Globe, Send, Phone, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 
