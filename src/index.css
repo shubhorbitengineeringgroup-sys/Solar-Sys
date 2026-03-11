@@ -122,34 +122,33 @@
 
   /* Pill Button Styles */
   .get-quote-pill {
-    background: linear-gradient(135deg, #f7a602 0%, #ffc102 100%);
-    color: white !important;
+    background: white;
+    color: #f7a602 !important;
     border-radius: 9999px;
-    padding: 0.6rem 1.8rem;
-    font-weight: 600;
-    box-shadow: 0 4px 12px rgba(247, 166, 2, 0.25);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    border: 2px solid transparent;
-    cursor: pointer;
+    padding: 0.5rem 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    /* The "Outer Body" Effect */
+    border: 2px solid #f7a602;
+    box-shadow: 0 0 0 4px #fee2b3;
   }
 
-  .get-quote-pill:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(247, 166, 2, 0.35);
-    filter: brightness(1.05);
+  .get-quote-pill:hover, .get-quote-pill.active {
+    background: #f7a602;
+    color: white !important;
+    transform: scale(1.05);
+    box-shadow: 0 0 0 6px #fee2b3, 0 10px 20px -10px rgba(0,0,0,0.2);
+    border-color: white;
   }
 
   .get-quote-pill:active {
-    transform: translateY(1px);
-  }
-
-  .get-quote-pill.active {
-    background: linear-gradient(135deg, #e69500 0%, #edb400 100%);
-    box-shadow: 0 0 0 3px rgba(247, 166, 2, 0.3);
-    border-color: white;
+    transform: scale(0.95);
   }
 }

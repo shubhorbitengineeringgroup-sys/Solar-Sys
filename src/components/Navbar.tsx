@@ -27,14 +27,14 @@ const Navbar = () => {
         </a>
 
         {/* Desktop links */}
-        <div className="hidden md:flex items-center gap-2">
+        <div className="hidden md:flex items-center gap-4 px-2">
           {links.map((link) => (
             <a
               key={link.href}
               href={link.href}
               onClick={() => handleLinkClick(link.href)}
-              className={`get-quote-pill text-[10px] px-3 py-1.5 font-bold uppercase tracking-wider ${
-                activeLink === link.href ? "active" : "opacity-80 hover:opacity-100"
+              className={`get-quote-pill text-[10px] px-3.5 py-1.5 ${
+                activeLink === link.href ? "active" : ""
               }`}
             >
               {link.label}
@@ -43,7 +43,7 @@ const Navbar = () => {
           <a
             href="#contact"
             onClick={() => setActiveLink("#contact")}
-            className={`get-quote-pill text-[10px] px-4 py-2 font-bold uppercase tracking-widest ml-2 ${
+            className={`get-quote-pill text-[10px] px-4 py-1.5 ml-2 ${
               activeLink === "#contact" ? "active" : ""
             }`}
           >

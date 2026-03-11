@@ -116,6 +116,7 @@ export default {
         "pulse-slow": "pulse-slow 8s cubic-bezier(0.4, 0, 0.6, 1) infinite",
         "blob": "blob 7s infinite",
         "float": "float 4s ease-in-out infinite",
+        "spin-slow": "spin 8s linear infinite",
       },
     },
   },

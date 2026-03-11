@@ -15,50 +15,54 @@ const missionPoints = [
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-24 relative overflow-hidden">
+    <section id="about" className="py-24 relative overflow-hidden bg-background">
       {/* Background patterns */}
       <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none" 
-           style={{ backgroundImage: `radial-gradient(circle at 2px 2px, black 1px, transparent 0)`, backgroundSize: '40px 40px' }} />
+           style={{ backgroundImage: `radial-gradient(circle at 2px 2px, hsl(var(--foreground)) 1px, transparent 0)`, backgroundSize: '40px 40px' }} />
       
-      <div className="container mx-auto px-4 space-y-24 relative z-10">
-
-        {/* ── Existing About + Stats ── */}
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <div className="space-y-6">
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-foreground">
-              About{" "}
-              <span className="photon-gradient-text">SOLARSYS LLP</span>
+      <div className="container mx-auto px-4 space-y-32 relative z-10">
+        {/* About + Stats */}
+        <div className="grid lg:grid-cols-2 gap-20 items-center">
+          <div className="space-y-8 animate-fade-in">
+            <div className="inline-block px-3 py-1 rounded-full bg-accent/10 border border-accent/20 text-accent font-bold text-[10px] tracking-widest uppercase">
+              Who We Are
+            </div>
+            <h2 className="text-3xl sm:text-5xl font-heading font-black text-foreground leading-tight">
+              Leading the <br />
+              <span className="photon-gradient-text">Energy Evolution</span>
             </h2>
-            <p className="text-muted-foreground leading-relaxed">
-              SOLARSYS LLP is a premier solar energy company dedicated to accelerating the
-              transition to clean, renewable power. We specialize in the design, engineering,
-              installation, and maintenance of advanced photovoltaic systems for residential,
-              commercial, and industrial clients.
-            </p>
-            <p className="text-muted-foreground leading-relaxed">
-              <strong className="text-foreground">Our Mission:</strong> To make solar energy
-              accessible, affordable, and reliable for everyone — empowering communities to
-              reduce their carbon footprint and achieve energy independence.
-            </p>
-            <p className="text-muted-foreground leading-relaxed">
-              <strong className="text-foreground">Our Vision:</strong> A future where every
-              rooftop generates clean energy, and sustainable power is the standard — not the
-              exception. We are committed to building solar infrastructure that lasts decades
-              and delivers measurable environmental and financial returns.
-            </p>
+            <div className="space-y-6 text-muted-foreground text-lg leading-relaxed font-light">
+              <p>
+                SOLARSYS LLP is a premier solar energy company dedicated to accelerating the
+                transition to clean, renewable power. We specialize in the design, engineering,
+                installation, and maintenance of advanced photovoltaic systems for residential,
+                commercial, and industrial clients.
+              </p>
+              <p>
+                <strong className="text-foreground font-bold">Our Mission:</strong> To make solar energy
+                accessible, affordable, and reliable for everyone — empowering communities to
+                reduce their carbon footprint and achieve energy independence.
+              </p>
+              <p>
+                <strong className="text-foreground font-bold">Our Vision:</strong> A future where every
+                rooftop generates clean energy, and sustainable power is the standard — not the
+                exception.
+              </p>
+            </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-4">
-            {stats.map((stat) => (
+          <div className="grid grid-cols-2 gap-6">
+            {stats.map((stat, idx) => (
               <div
                 key={stat.label}
-                className="bg-card rounded-card p-6 text-center photon-border-hover transition-all duration-300"
+                className="group relative bg-card/40 backdrop-blur-sm rounded-3xl p-8 border border-border/50 hover:border-accent/30 transition-all duration-500 hover:shadow-2xl hover:shadow-accent/5 overflow-hidden"
               >
-                <stat.icon className="w-6 h-6 mx-auto mb-3 text-accent" />
-                <div className="text-2xl font-heading font-bold text-foreground">
+                <div className="absolute top-0 right-0 w-20 h-20 bg-accent/5 rounded-full -mr-10 -mt-10 blur-2xl group-hover:bg-accent/10 transition-colors" />
+                <stat.icon className="w-8 h-8 mb-6 text-accent group-hover:scale-110 transition-transform duration-300" />
+                <div className="text-3xl font-heading font-black text-foreground mb-2">
                   {stat.value}
                 </div>
-                <div className="text-xs text-muted-foreground mt-1">
+                <div className="text-xs text-muted-foreground uppercase tracking-widest font-bold">
                   {stat.label}
                 </div>
               </div>
@@ -67,102 +71,61 @@ const AboutSection = () => {
         </div>
 
         {/* ── Our Mission Section ── */}
-        <div
-          className="rounded-2xl overflow-hidden"
-          style={{
-            background: "linear-gradient(135deg, hsl(200 33% 97%), hsl(200 40% 95%))",
-            border: "1px solid hsl(var(--border))",
-          }}
-        >
-          <div className="grid lg:grid-cols-2 gap-0 items-stretch">
-
-            {/* Left — Text */}
-            <div className="p-10 lg:p-14 flex flex-col justify-center space-y-6">
-              {/* Title */}
-              <div>
-                <h3
-                  className="text-3xl sm:text-4xl font-heading font-bold mb-3"
-                  style={{ color: "hsl(130 45% 28%)" }}
-                >
-                  Our Mission
-                </h3>
-                {/* Decorative divider with icon */}
-                <div className="flex items-center gap-2">
-                  <div
-                    className="h-0.5 w-8 rounded-full"
-                    style={{ background: "hsl(var(--accent))" }}
-                  />
-                  <Sun
-                    className="w-4 h-4"
-                    style={{ color: "hsl(var(--accent))" }}
-                  />
-                  <div
-                    className="h-0.5 w-8 rounded-full"
-                    style={{ background: "hsl(var(--accent))" }}
-                  />
+        <div className="relative group">
+          <div className="absolute inset-0 bg-accent/5 rounded-[2.5rem] blur-3xl -z-10 opacity-50 group-hover:opacity-100 transition-opacity duration-700" />
+          <div className="rounded-[2.5rem] overflow-hidden border border-border/50 bg-card shadow-xl">
+            <div className="grid lg:grid-cols-2 gap-0 items-stretch">
+              {/* Left — Text */}
+              <div className="p-12 lg:p-16 flex flex-col justify-center space-y-8">
+                <div>
+                  <h3 className="text-3xl sm:text-5xl font-heading font-black text-foreground mb-4">
+                    Our <span className="photon-gradient-text">Mission</span>
+                  </h3>
+                  <div className="flex items-center gap-2">
+                    <div className="h-1 w-12 rounded-full bg-accent" />
+                    <Sun className="w-5 h-5 text-accent animate-spin-slow" />
+                    <div className="h-1 w-12 rounded-full bg-accent/30" />
+                  </div>
                 </div>
-              </div>
 
-              {/* Mission Statement label + intro */}
-              <div>
-                <p
-                  className="text-xs font-bold tracking-widest uppercase mb-2"
-                  style={{ color: "hsl(130 45% 28%)" }}
-                >
-                  Mission Statement
-                </p>
-                <p className="text-sm leading-relaxed" style={{ color: "hsl(210 20% 35%)" }}>
-                  We believe that renewable energy is the key to building a better future, and
-                  we are passionate about making it a reality for everyone.
-                </p>
-              </div>
+                <div className="space-y-4">
+                  <p className="text-xs font-black tracking-[.2em] uppercase text-accent">
+                    Mission Statement
+                  </p>
+                  <p className="text-lg text-muted-foreground font-light leading-relaxed">
+                    We believe that renewable energy is the key to building a better future, and
+                    we are passionate about making it a reality for everyone.
+                  </p>
+                </div>
 
-              {/* Our mission is */}
-              <div>
-                <p
-                  className="text-sm font-bold mb-3"
-                  style={{ color: "hsl(210 80% 15%)" }}
-                >
-                  Our mission is:
-                </p>
-                <ul className="space-y-3">
+                <ul className="space-y-4">
                   {missionPoints.map((point, idx) => (
-                    <li key={idx} className="flex items-start gap-3">
-                      <span
-                        className="mt-1 flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center text-xs font-bold"
-                        style={{
-                          background: "linear-gradient(135deg, hsl(33 100% 50%), hsl(48 100% 50%))",
-                          color: "#fff",
-                        }}
-                      >
-                        •
-                      </span>
-                      <span className="text-sm leading-relaxed" style={{ color: "hsl(210 20% 35%)" }}>
+                    <li key={idx} className="flex items-start gap-4 group/item">
+                      <div className="mt-1 w-6 h-6 rounded-full bg-accent/10 flex items-center justify-center text-accent group-hover/item:bg-accent group-item/item:text-white transition-all duration-300 flex-shrink-0">
+                        <Zap size={12} />
+                      </div>
+                      <span className="text-muted-foreground leading-relaxed">
                         {point}
                       </span>
                     </li>
                   ))}
                 </ul>
               </div>
-            </div>
 
-            {/* Right — Illustration */}
-            <div
-              className="flex items-end justify-center p-8 lg:p-10"
-              style={{
-                background: "linear-gradient(160deg, hsl(200 70% 92% / 0.6), hsl(140 40% 88% / 0.4))",
-              }}
-            >
-              <img
-                src="/about-first.png"
-                alt="Solar energy illustration with wind turbines and solar panels"
-                className="w-full object-contain drop-shadow-lg"
-                style={{ maxHeight: "320px", borderRadius: "8px" }}
-              />
+              {/* Right — Illustration */}
+              <div className="relative flex items-center justify-center p-12 lg:p-16 bg-gradient-to-br from-accent/5 to-primary/5">
+                <div className="absolute inset-0 opacity-20 pointer-events-none" 
+                     style={{ backgroundImage: `radial-gradient(circle at 1px 1px, hsl(var(--accent)) 1px, transparent 0)`, backgroundSize: '16px 16px' }} />
+                <img
+                  src="/about-first.png"
+                  alt="Solar energy illustration"
+                  className="w-full h-auto object-contain drop-shadow-2xl z-10 hover:scale-105 transition-transform duration-700"
+                  style={{ maxHeight: "400px" }}
+                />
+              </div>
             </div>
           </div>
         </div>
-
       </div>
     </section>
   );
