@@ -39,7 +39,7 @@ const ServicesSection = () => {
       {/* Decorative details */}
       <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-accent/5 blur-[120px] rounded-full pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-1/4 h-1/4 bg-primary/5 blur-[100px] rounded-full pointer-events-none" />
-      
+
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-20 max-w-2xl mx-auto">
           <div className="inline-block px-3 py-1 rounded-full bg-accent/10 border border-accent/20 text-accent font-medium text-xs tracking-wider uppercase mb-4">
