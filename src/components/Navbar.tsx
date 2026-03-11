@@ -27,16 +27,14 @@ const Navbar = () => {
         </a>
 
         {/* Desktop links */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-2">
           {links.map((link) => (
             <a
               key={link.href}
               href={link.href}
               onClick={() => handleLinkClick(link.href)}
-              className={`text-sm font-medium transition-colors ${
-                activeLink === link.href && link.label !== "Contact"
-                  ? "text-foreground font-semibold"
-                  : "text-muted-foreground hover:text-foreground"
+              className={`get-quote-pill text-[10px] px-3 py-1.5 font-bold uppercase tracking-wider ${
+                activeLink === link.href ? "active" : "opacity-80 hover:opacity-100"
               }`}
             >
               {link.label}
@@ -45,7 +43,9 @@ const Navbar = () => {
           <a
             href="#contact"
             onClick={() => setActiveLink("#contact")}
-            className={`get-quote-pill text-sm ${activeLink === "#contact" ? "active" : ""}`}
+            className={`get-quote-pill text-[10px] px-4 py-2 font-bold uppercase tracking-widest ml-2 ${
+              activeLink === "#contact" ? "active" : ""
+            }`}
           >
             Get Quote
           </a>
@@ -64,16 +64,14 @@ const Navbar = () => {
       {/* Mobile menu */}
       {isOpen && (
         <div className="md:hidden bg-background border-b border-border px-4 pb-6">
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-3 pt-4">
             {links.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={() => handleLinkClick(link.href)}
-                className={`block py-2 text-sm font-medium transition-colors ${
-                  activeLink === link.href
-                    ? "text-foreground"
-                    : "text-muted-foreground hover:text-foreground"
+                className={`get-quote-pill w-full text-center py-3 ${
+                  activeLink === link.href ? "active" : ""
                 }`}
               >
                 {link.label}
@@ -85,7 +83,7 @@ const Navbar = () => {
                 setActiveLink("#contact");
                 setIsOpen(false);
               }}
-              className={`get-quote-pill w-full mt-2 text-center ${
+              className={`get-quote-pill w-full mt-2 text-center py-4 bg-accent text-white font-black uppercase tracking-[0.2em] shadow-2xl ${
                 activeLink === "#contact" ? "active" : ""
               }`}
             >

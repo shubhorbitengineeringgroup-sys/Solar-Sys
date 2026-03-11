@@ -33,29 +33,40 @@ const reasons = [
   },
 ];
 
+import solarBgImg from "@/assets/industrial-solar-facility.png";
+
 const WhyChooseUsSection = () => {
   return (
-    <section id="why-us" className="py-24 section-divider bg-primary text-primary-foreground">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16 max-w-xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-heading font-bold mb-4">
-            Why Choose <span className="photon-gradient-text">SOLARSYS</span>
+    <section id="why-us" className="relative py-24 overflow-hidden bg-primary text-primary-foreground">
+      {/* Background Image Overlay */}
+      <div 
+        className="absolute inset-0 z-0 opacity-10 bg-cover bg-center"
+        style={{ backgroundImage: `url(${solarBgImg})` }}
+      />
+      
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="text-center mb-16 max-w-2xl mx-auto">
+          <div className="inline-block px-3 py-1 rounded-full bg-accent/20 border border-accent/30 text-accent font-medium text-xs tracking-wider uppercase mb-4">
+            The SOLARSYS Advantage
+          </div>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold mb-6">
+            Leading the <span className="photon-gradient-text">Solar</span> Revolution
           </h2>
-          <p className="text-primary-foreground/70">
-            Trusted by hundreds of clients. Built on quality, transparency, and results.
+          <p className="text-primary-foreground/70 text-lg">
+            We don't just install panels; we deliver peace of mind and long-term energy independence through superior engineering.
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {reasons.map((reason) => (
             <div
               key={reason.title}
-              className="bg-primary-foreground/5 backdrop-blur-sm rounded-card p-8 border border-primary-foreground/10 hover:border-accent/50 hover:bg-primary-foreground/10 transition-all duration-300"
+              className="group bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-white/10 hover:border-accent/40 hover:bg-white/10 transition-all duration-500 hover:-translate-y-1"
             >
-              <div className="w-12 h-12 rounded-full photon-gradient flex items-center justify-center mb-5">
-                <reason.icon className="w-5 h-5 text-accent-foreground" />
+              <div className="w-14 h-14 rounded-2xl photon-gradient flex items-center justify-center mb-6 rotate-3 group-hover:rotate-0 transition-transform duration-300">
+                <reason.icon className="w-6 h-6 text-accent-foreground" />
               </div>
-              <h3 className="font-heading font-semibold mb-3">
+              <h3 className="font-heading font-bold text-xl mb-4 group-hover:text-accent transition-colors duration-300">
                 {reason.title}
               </h3>
               <p className="text-sm text-primary-foreground/60 leading-relaxed">

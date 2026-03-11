@@ -1,10 +1,13 @@
-import projectImg from "@/assets/project-new.png";
+import project1Img from "@/assets/project-1.jpg";
+import project2Img from "@/assets/project-2.jpg";
+import project3Img from "@/assets/project-3.jpg";
+import project4Img from "@/assets/project-4.jpg";
 
 const projects = [
-  { img: projectImg, title: "Residential Rooftop System", location: "Suburban Home", kw: "10 kW" },
-  { img: projectImg, title: "Commercial Solar Farm", location: "Industrial Park", kw: "2.5 MW" },
-  { img: projectImg, title: "Factory Rooftop Installation", location: "Manufacturing Unit", kw: "500 kW" },
-  { img: projectImg, title: "Office Complex Array", location: "Corporate Campus", kw: "800 kW" },
+  { img: project1Img, title: "Residential Rooftop System", location: "Suburban Home", kw: "10 kW", type: "Home" },
+  { img: project2Img, title: "Commercial Solar Farm", location: "Industrial Park", kw: "2.5 MW", type: "Commercial" },
+  { img: project3Img, title: "Factory Rooftop Installation", location: "Manufacturing Unit", kw: "500 kW", type: "Industrial" },
+  { img: project4Img, title: "Office Complex Array", location: "Corporate Campus", kw: "800 kW", type: "Commercial" },
 ];
 
 const ProjectsSection = () => {
@@ -23,26 +26,38 @@ const ProjectsSection = () => {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {projects.map((project) => (
             <div
               key={project.title}
-              className="group relative rounded-card overflow-hidden bg-card photon-border-hover transition-all duration-300"
+              className="group relative rounded-2xl overflow-hidden bg-white border border-border/40 hover:border-accent/30 transition-all duration-500 hover:shadow-xl hover:-translate-y-2"
             >
-              <div className="overflow-hidden bg-muted aspect-[4/3]">
+              <div className="aspect-[4/3] overflow-hidden relative">
                 <img
                   src={project.img}
                   alt={project.title}
-                  className="w-full h-full object-cover object-right-top group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700"
                 />
+                <div className="absolute top-4 left-4 bg-accent text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider z-10 shadow-lg shadow-accent/20">
+                  {project.type}
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>
-              <div className="p-5">
-                <h3 className="font-heading font-semibold text-foreground text-sm">
-                  {project.title}
-                </h3>
-                <p className="text-xs text-muted-foreground mt-1">
-                  {project.location} · {project.kw}
-                </p>
+              
+              <div className="p-6">
+                <div className="flex flex-col gap-1">
+                  <h3 className="font-heading font-bold text-foreground text-lg group-hover:text-accent transition-colors duration-300">
+                    {project.title}
+                  </h3>
+                  <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                    <span className="w-1.5 h-1.5 rounded-full bg-accent" />
+                    {project.location}
+                  </div>
+                  <div className="mt-4 flex items-center justify-between">
+                    <span className="text-xs font-bold font-heading text-accent/80 uppercase">Capacity</span>
+                    <span className="text-sm font-bold text-foreground">{project.kw}</span>
+                  </div>
+                </div>
               </div>
             </div>
           ))}

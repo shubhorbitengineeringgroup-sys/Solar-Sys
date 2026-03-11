@@ -15,8 +15,12 @@ const missionPoints = [
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-24 section-divider">
-      <div className="container mx-auto px-4 space-y-24">
+    <section id="about" className="py-24 relative overflow-hidden">
+      {/* Background patterns */}
+      <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none" 
+           style={{ backgroundImage: `radial-gradient(circle at 2px 2px, black 1px, transparent 0)`, backgroundSize: '40px 40px' }} />
+      
+      <div className="container mx-auto px-4 space-y-24 relative z-10">
 
         {/* ── Existing About + Stats ── */}
         <div className="grid lg:grid-cols-2 gap-16 items-center">
