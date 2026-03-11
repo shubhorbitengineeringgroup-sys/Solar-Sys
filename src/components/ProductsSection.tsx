@@ -1,4 +1,4 @@
-import { Factory, SunMedium, Settings } from "lucide-react";
+import { Factory, SunMedium, Settings, Zap } from "lucide-react";
 
 const products = [
   {
@@ -19,6 +19,13 @@ const products = [
     description:
       "Switchgears, MCC/PCC panels, and control & protection systems ensuring safe and efficient power distribution.",
   },
+  {
+    icon: Zap,
+    title: "Industrial Solar Panels",
+    technical: "Industrial Solar Panels",
+    description:
+      "Industrial solar panels are a powerful and cost-effective energy solution designed to meet the high electricity demands of factories, manufacturing units, warehouses, and large-scale industrial facilities. By utilizing renewable solar energy, industries can significantly reduce operational costs, improve energy efficiency, and achieve long-term sustainability goals.\n\nOur industrial solar systems are engineered using high-efficiency solar modules, robust inverters, and heavy-duty mounting structures to withstand harsh environmental conditions and continuous power loads. These systems can be installed on rooftops or open land and are customized according to energy consumption patterns and available space.",
+  },
 ];
 
 const ProductsSection = () => {
@@ -34,21 +41,29 @@ const ProductsSection = () => {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 gap-8">
           {products.map((product) => (
             <div
               key={product.title}
-              className="group bg-card rounded-card p-8 photon-border-hover transition-all duration-300"
+              className="group bg-card rounded-card p-8 photon-border-hover transition-all duration-300 h-full flex flex-col"
             >
-              <div className="w-14 h-14 diamond-clip photon-gradient flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                <product.icon className="w-6 h-6 text-accent-foreground" />
+              <div className="w-16 h-16 diamond-clip photon-gradient flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shrink-0">
+                <product.icon className="w-8 h-8 text-accent-foreground" />
               </div>
-              <h3 className="font-heading font-semibold text-foreground mb-3">
-                {product.title}
-              </h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                {product.description}
-              </p>
+              
+              <div className="flex-grow">
+                <h3 className="font-heading font-semibold text-foreground mb-1 text-xl">
+                  {product.title}
+                </h3>
+                {product.technical && (
+                  <p className="text-xs font-semibold uppercase tracking-wider text-accent mb-3">
+                    Technical: {product.technical}
+                  </p>
+                )}
+                <p className="text-sm text-muted-foreground leading-relaxed whitespace-pre-line">
+                  {product.description}
+                </p>
+              </div>
             </div>
           ))}
         </div>
@@ -58,3 +73,7 @@ const ProductsSection = () => {
 };
 
 export default ProductsSection;
+
+
+
+

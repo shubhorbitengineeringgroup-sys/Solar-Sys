@@ -1,13 +1,10 @@
-import project1 from "@/assets/project-1.jpg";
-import project2 from "@/assets/project-2.jpg";
-import project3 from "@/assets/project-3.jpg";
-import project4 from "@/assets/project-4.jpg";
+import projectImg from "@/assets/project-new.png";
 
 const projects = [
-  { img: project1, title: "Residential Rooftop System", location: "Suburban Home", kw: "10 kW" },
-  { img: project2, title: "Commercial Solar Farm", location: "Industrial Park", kw: "2.5 MW" },
-  { img: project3, title: "Factory Rooftop Installation", location: "Manufacturing Unit", kw: "500 kW" },
-  { img: project4, title: "Office Complex Array", location: "Corporate Campus", kw: "800 kW" },
+  { img: projectImg, title: "Residential Rooftop System", location: "Suburban Home", kw: "10 kW" },
+  { img: projectImg, title: "Commercial Solar Farm", location: "Industrial Park", kw: "2.5 MW" },
+  { img: projectImg, title: "Factory Rooftop Installation", location: "Manufacturing Unit", kw: "500 kW" },
+  { img: projectImg, title: "Office Complex Array", location: "Corporate Campus", kw: "800 kW" },
 ];
 
 const ProjectsSection = () => {
@@ -30,18 +27,16 @@ const ProjectsSection = () => {
           {projects.map((project) => (
             <div
               key={project.title}
-              className="group relative rounded-card overflow-hidden photon-border-hover transition-all duration-300"
+              className="group relative rounded-card overflow-hidden bg-card photon-border-hover transition-all duration-300"
             >
-              <div className="aspect-square overflow-hidden bg-card flex items-center justify-center p-6">
-                <div className="diamond-clip w-full h-full overflow-hidden group-hover:scale-105 transition-transform duration-500">
-                  <img
-                    src={project.img}
-                    alt={project.title}
-                    className="w-full h-full object-cover scale-150"
-                  />
-                </div>
+              <div className="overflow-hidden bg-muted aspect-[4/3]">
+                <img
+                  src={project.img}
+                  alt={project.title}
+                  className="w-full h-full object-cover object-right-top group-hover:scale-105 transition-transform duration-500"
+                />
               </div>
-              <div className="p-5 bg-card">
+              <div className="p-5">
                 <h3 className="font-heading font-semibold text-foreground text-sm">
                   {project.title}
                 </h3>
