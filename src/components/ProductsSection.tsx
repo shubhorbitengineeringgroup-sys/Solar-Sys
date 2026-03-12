@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { productsData } from "@/lib/products-data";
-import solarSolutionImg from "@/assets/industrial-solar-facility.png";
+import solarSolutionImg from "@/assets/project-new.png";
 import solarProductsImg from "@/assets/green-city-solar.png";
 import solarMonitoringImg from "@/assets/solar-monitoring.png";
 import portableSolarImg from "@/assets/portable-solar.png";
@@ -30,14 +30,6 @@ const products = [
     description:
       "Reliable solar power on the go. Perfect for remote sites, camping, and emergency backup power needs.",
   },
-  {
-    id: "solar-rooftop-systems",
-    image: solarProductsImg,
-    title: "Solar Rooftop Systems",
-    technical: "Residential & Commercial",
-    description:
-      "Custom-designed rooftop solar installations that turn your idle roof space into a powerful source of savings.",
-  },
 ];
 
 const ProductsSection = () => {
@@ -56,7 +48,7 @@ const ProductsSection = () => {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {products.map((product) => (
             <div
               key={product.id}

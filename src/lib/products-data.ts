@@ -1,7 +1,7 @@
 import solarPanelImg from "@/assets/industrial-solar.png";
 import solarInverterImg from "@/assets/hybrid-inverter.png";
 import solarBatteryImg from "@/assets/battery-storage.png";
-import solarChargeControllerImg from "@/assets/industrial-solar-clear.png";
+import solarChargeControllerImg from "@/assets/service-installation.png";
 import solarStreetLightImg from "@/assets/green-city-solar.png";
 import solarWaterPumpImg from "@/assets/industrial-solar-facility.png";
 
