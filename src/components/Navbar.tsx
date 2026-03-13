@@ -6,6 +6,7 @@ const Navbar = () => {
   const [activeLink, setActiveLink] = useState("");
 
   const links = [
+    { label: "Home", href: "/" },
     { label: "About", href: "/#about" },
     { label: "Products", href: "/#products" },
     { label: "Projects", href: "/#projects" },
@@ -20,7 +21,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border pl-[2in]">
       <div className="container mx-auto flex items-center justify-between h-20 px-4">
         <a href="/" className="font-heading text-2xl font-bold tracking-tight text-foreground" onClick={() => setActiveLink("")}>
           SOLAR<span className="photon-gradient-text">SYS</span>
