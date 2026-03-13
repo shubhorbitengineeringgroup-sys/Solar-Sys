@@ -4,6 +4,14 @@ import solarBatteryImg from "@/assets/battery-storage.png";
 import solarChargeControllerImg from "@/assets/service-installation.png";
 import solarStreetLightImg from "@/assets/green-city-solar.png";
 import solarWaterPumpImg from "@/assets/industrial-solar-facility.png";
+import solarSolutionImg from "@/assets/project-new.png";
+import solarMonitoringImg from "@/assets/solar-monitoring.png";
+import portableSolarImg from "@/assets/portable-solar.png";
+
+export interface ProductType {
+  name: string;
+  description: string;
+}
 
 export interface ProductDetail {
   id: string;
@@ -14,6 +22,9 @@ export interface ProductDetail {
   applications: string[];
   benefits: string[];
   image: string;
+  lifespan: string;
+  warranty: string;
+  types: ProductType[];
 }
 
 export const productsData: Record<string, ProductDetail> = {
@@ -48,6 +59,14 @@ export const productsData: Record<string, ProductDetail> = {
       "Significant Savings on electricity bills.",
       "Eco-Friendly: Zero carbon emissions.",
       "Long-Term Reliability: Designed to last 25+ years."
+    ],
+    lifespan: "25–30 Years",
+    warranty: "25-Year Linear Performance Warranty",
+    types: [
+      { name: "Monocrystalline PERC", description: "Highest efficiency (20-22%) and sleek black aesthetics. Best for limited roof space." },
+      { name: "Polycrystalline", description: "Cost-effective blue-tinted panels. Great for large open spaces where space isn't a premium." },
+      { name: "Bifacial Panels", description: "Captures sunlight from both front and back, boosting yield by up to 30% on reflective surfaces." },
+      { name: "Thin-Film Solar", description: "Lightweight and flexible, ideal for curved surfaces or portable applications." }
     ]
   },
   "solar-inverter": {
@@ -80,6 +99,14 @@ export const productsData: Record<string, ProductDetail> = {
       "Maximum Yield with high conversion efficiency.",
       "Grid Stability: Helps manage peak loads.",
       "User Control: Monitor savings via mobile app."
+    ],
+    lifespan: "10–15 Years",
+    warranty: "5–10 Years (Extendable)",
+    types: [
+      { name: "On-Grid (String) Inverters", description: "Most common type. Connects directly to the grid to reduce electricity bills." },
+      { name: "Hybrid Inverters", description: "The smartest choice. Manages both solar panels and battery storage for backup power." },
+      { name: "Off-Grid Inverters", description: "Designed for remote areas. Works entirely split from the utility grid." },
+      { name: "Microinverters", description: "Installed on each panel. Maximizes output if part of the roof is shadowed." }
     ]
   },
   "solar-battery": {
@@ -111,6 +138,14 @@ export const productsData: Record<string, ProductDetail> = {
       "Energy Independence: Power your home 24/7.",
       "Safety First: Non-toxic materials.",
       "Compact Footprint: Space-saving design."
+    ],
+    lifespan: "10–12 Years (6000+ Cycles)",
+    warranty: "5–10 Years Performance Warranty",
+    types: [
+      { name: "LiFePO4 (LFP)", description: "The safest lithium chemistry. Non-toxic, fire-resistant, and supports deep discharge." },
+      { name: "Lead-Acid (GEL/AGM)", description: "Lower upfront cost but shorter lifespan. Used in basic off-grid setups." },
+      { name: "Wall-Mounted ESS", description: "Space-saving design that mounts on your wall like a modern appliance." },
+      { name: "Stackable Modules", description: "Expandable storage. Add more battery packs as your energy needs grow." }
     ]
   },
   "solar-charge-controller": {
@@ -142,6 +177,13 @@ export const productsData: Record<string, ProductDetail> = {
       "Optimized Charging for maximum power extraction.",
       "Extended Battery Life with smart regulation.",
       "Cost-Effective performance enhancement."
+    ],
+    lifespan: "8–10 Years",
+    warranty: "2–5 Years",
+    types: [
+      { name: "MPPT Controllers", description: "Maximum Power Point Tracking. Extracts up to 30% more power than PWM." },
+      { name: "PWM Controllers", description: "Pulse Width Modulation. Simple and economical for small 12V systems." },
+      { name: "Waterproof Controllers", description: "IP68 rated for marine, RV, and outdoor lighting applications." }
     ]
   },
   "solar-street-light": {
@@ -174,6 +216,13 @@ export const productsData: Record<string, ProductDetail> = {
       "Zero Running Cost: Powered by free sun energy.",
       "Enhanced Safety and Security.",
       "Eco-Friendly and maintenance-free."
+    ],
+    lifespan: "5–8 Years (LED & Battery)",
+    warranty: "2–3 Years All-Inclusive",
+    types: [
+      { name: "All-in-One Integrated", description: "Panel, battery, and light in one housing. Easiest theft-proof installation." },
+      { name: "Split-Type Solar Lights", description: "Adjustable panel orientation to maximize sun exposure in shaded areas." },
+      { name: "Flood Lights with Motion", description: "High intensity lighting that activates when motion is detected." }
     ]
   },
   "solar-water-pump": {
@@ -206,6 +255,123 @@ export const productsData: Record<string, ProductDetail> = {
       "Independent Irrigation without diesel costs.",
       "Low Maintenance in rugged environments.",
       "Automatic Speed Adjustment based on sun."
+    ],
+    lifespan: "15–20 Years (Pump Body)",
+    warranty: "1–2 Years on Electronics; 5 Years on Pump",
+    types: [
+      { name: "Submersible Pumps", description: "Installed deep inside borewells. Ideal for high-head water lifting." },
+      { name: "Surface Pumps", description: "Placed on the ground near rivers or ponds. High flow rate for irrigation." },
+      { name: "DC Brushless Pumps", description: "Operates directly from solar panels without needing an inverter." }
+    ]
+  },
+  "solar-energy-solutions": {
+    id: "solar-energy-solutions",
+    image: solarSolutionImg,
+    title: "Solar Energy Solutions",
+    overview: "Comprehensive solar systems for clean, reliable, and cost-effective power generation across industrial, commercial, and infrastructure projects. We provide end-to-end integration of panels, inverters, and storage.",
+    features: [
+      "Turnkey Integration: Complete system setup.",
+      "Scalable Architecture: Grows with your needs.",
+      "High-Efficiency Output: Maximum ROI.",
+      "Grid-Tie & Off-Grid Options: Flexible deployment."
+    ],
+    specs: {
+      "System Type": "Grid-Interactive / Off-Grid",
+      "Capacity Range": "10kW to 1MW+",
+      "Panel Technology": "Mono-PERC / Bifacial",
+      "Mounting System": "Roof / Ground / Carport",
+      "Inverter Tech": "String / Central Inverters"
+    },
+    applications: [
+      "Industrial Factories",
+      "Commercial Offices",
+      "Agricultural Farms",
+      "Residential Complexes"
+    ],
+    benefits: [
+      "Reduced Operational Costs.",
+      "Corporate Sustainability Compliance.",
+      "Protection against rising energy tariffs."
+    ],
+    lifespan: "25+ Years",
+    warranty: "System-wide 5-Year Maintenance; 25-Year Panel Warranty",
+    types: [
+      { name: "Residential Rooftop", description: "Tailored for homes to achieve zero-cost electricity bills." },
+      { name: "Commercial & Industrial", description: "Large scale setups for factories to reduce operational overheads." },
+      { name: "Ground-Mount Farms", description: "Utility-scale installations on open land for power generation." }
+    ]
+  },
+  "smart-solar-monitoring": {
+    id: "smart-solar-monitoring",
+    image: solarMonitoringImg,
+    title: "Smart Solar Monitoring",
+    overview: "Cloud-based monitoring systems that give you full visibility into your energy production and savings in real-time. Analyze performance metrics and detect issues before they affect your yield.",
+    features: [
+      "Real-time Analytics: Instant data visualization.",
+      "Fault Alerts: Automatic notifications for issues.",
+      "Cloud Accessibility: Access from anywhere.",
+      "Historical Reports: Track savings over time."
+    ],
+    specs: {
+      "Platform": "Web & Mobile App (iOS/Android)",
+      "Connectivity": "Wi-Fi / LAN / 4G LTE",
+      "Data Interval": "1 - 5 Minutes",
+      "Protocol Support": "Modbus RTU / TCP",
+      "Security": "End-to-End Encryption"
+    },
+    applications: [
+      "Remote Site Management",
+      "Commercial Energy Auditing",
+      "Residential Performance Tracking"
+    ],
+    benefits: [
+      "Peace of Mind: Know your system is working.",
+      "Optimized Maintenance: Data-driven servicing.",
+      "Maximized Yield: Identify and fix underperformance."
+    ],
+    lifespan: "Continuous Software Updates",
+    warranty: "2-Year Hardware Warranty; Lifetime Software Access",
+    types: [
+      { name: "Real-time Dashboards", description: "Live visualization of current production vs home consumption." },
+      { name: "Predictive Maintenance", description: "AI alerts you before a panel or inverter fails." },
+      { name: "Remote Shutdown", description: "Safety feature to remotely isolate the system during emergencies." }
+    ]
+  },
+  "portable-solar-kits": {
+    id: "portable-solar-kits",
+    image: portableSolarImg,
+    title: "Portable Solar Kits",
+    overview: "Reliable solar power on the go. Perfectly designed for remote sites, camping, and emergency backup power needs. Compact, lightweight, and easy to deploy.",
+    features: [
+      "Foldable Design: Easy to carry and store.",
+      "Plug-and-Play: No complex installation required.",
+      "Multiple Outputs: USB-C, DC, and AC support.",
+      "Weather Resistant: IP65 Rated for outdoor use."
+    ],
+    specs: {
+      "Panel Type": "Foldable Monocrystalline",
+      "Power Output": "100W / 200W / 400W",
+      "Battery Capacity": "Integrated 500Wh - 2000Wh",
+      "Charge Time": "4-8 Hours (Sun-dependent)",
+      "Total Weight": "5kg to 15kg"
+    },
+    applications: [
+      "Off-road Camping & Overlanding",
+      "Emergency Disaster Relief",
+      "Remote Field Stations",
+      "Mobile Device Charging"
+    ],
+    benefits: [
+      "Go Anywhere: True energy freedom.",
+      "Quiet Operation: No noise like gasoline generators.",
+      "Low Weight: Optimized for portability."
+    ],
+    lifespan: "10+ Years (Solar Cells)",
+    warranty: "1-2 Year Limited Warranty",
+    types: [
+      { name: "Foldable Suitcase Kits", description: "Rigid panels that fold like a briefcase. Extremely durable." },
+      { name: "Flexible Solar Mats", description: "Ultra-thin mats that roll up. Perfect for hiking and light travel." },
+      { name: "Integrated Power Stations", description: "Battery and panels in one portable unit for emergency backup." }
     ]
   }
 };
