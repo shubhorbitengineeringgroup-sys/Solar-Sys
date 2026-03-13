@@ -19,9 +19,9 @@ const AboutSection = () => {
   return (
     <section id="about" className="py-24 relative overflow-hidden bg-background">
       {/* Background patterns */}
-      <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none" 
-           style={{ backgroundImage: `radial-gradient(circle at 2px 2px, hsl(var(--foreground)) 1px, transparent 0)`, backgroundSize: '40px 40px' }} />
-      
+      <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none"
+        style={{ backgroundImage: `radial-gradient(circle at 2px 2px, hsl(var(--foreground)) 1px, transparent 0)`, backgroundSize: '40px 40px' }} />
+
       <div className="container mx-auto px-4 space-y-32 relative z-10">
         {/* About + Stats */}
         <div className="grid lg:grid-cols-2 gap-20 items-center">
@@ -95,7 +95,7 @@ const AboutSection = () => {
                     Our Philosophy
                   </p>
                   <p className="text-lg text-muted-foreground font-light leading-relaxed">
-                    Our philosophy is rooted in sustainability, engineering excellence, and 
+                    Our philosophy is rooted in sustainability, engineering excellence, and
                     a deep-seated commitment to making India energy-independent.
                   </p>
                 </div>
@@ -121,8 +121,8 @@ const AboutSection = () => {
 
               {/* Right — Illustration */}
               <div className="relative flex items-center justify-center p-12 lg:p-16 bg-gradient-to-br from-accent/5 to-primary/5">
-                <div className="absolute inset-0 opacity-20 pointer-events-none" 
-                     style={{ backgroundImage: `radial-gradient(circle at 1px 1px, hsl(var(--accent)) 1px, transparent 0)`, backgroundSize: '16px 16px' }} />
+                <div className="absolute inset-0 opacity-20 pointer-events-none"
+                  style={{ backgroundImage: `radial-gradient(circle at 1px 1px, hsl(var(--accent)) 1px, transparent 0)`, backgroundSize: '16px 16px' }} />
                 <img
                   src={coreValuesImg}
                   alt="Solar energy illustration"

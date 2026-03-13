@@ -63,7 +63,12 @@
     @apply bg-background text-foreground font-body antialiased;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: 'Space Grotesk', sans-serif;
     letter-spacing: -0.02em;
   }
@@ -140,11 +145,12 @@
     box-shadow: 0 0 0 4px #fee2b3;
   }
 
-  .get-quote-pill:hover, .get-quote-pill.active {
+  .get-quote-pill:hover,
+  .get-quote-pill.active {
     background: #f7a602;
     color: white !important;
     transform: scale(1.05);
-    box-shadow: 0 0 0 6px #fee2b3, 0 10px 20px -10px rgba(0,0,0,0.2);
+    box-shadow: 0 0 0 6px #fee2b3, 0 10px 20px -10px rgba(0, 0, 0, 0.2);
     border-color: white;
   }
 

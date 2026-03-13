@@ -33,9 +33,8 @@ const Navbar = () => {
               key={link.href}
               href={link.href}
               onClick={() => handleLinkClick(link.href)}
-              className={`get-quote-pill text-[10px] px-3.5 py-1.5 ${
-                activeLink === link.href ? "active" : ""
-              }`}
+              className={`get-quote-pill text-[10px] px-3.5 py-1.5 ${activeLink === link.href ? "active" : ""
+                }`}
             >
               {link.label}
             </a>
@@ -43,9 +42,8 @@ const Navbar = () => {
           <a
             href="#contact"
             onClick={() => setActiveLink("#contact")}
-            className={`get-quote-pill text-[10px] px-4 py-1.5 ml-2 ${
-              activeLink === "#contact" ? "active" : ""
-            }`}
+            className={`get-quote-pill text-[10px] px-4 py-1.5 ml-2 ${activeLink === "#contact" ? "active" : ""
+              }`}
           >
             Get Quote
           </a>
@@ -70,9 +68,8 @@ const Navbar = () => {
                 key={link.href}
                 href={link.href}
                 onClick={() => handleLinkClick(link.href)}
-                className={`get-quote-pill w-full text-center py-3 ${
-                  activeLink === link.href ? "active" : ""
-                }`}
+                className={`get-quote-pill w-full text-center py-3 ${activeLink === link.href ? "active" : ""
+                  }`}
               >
                 {link.label}
               </a>
@@ -83,9 +80,8 @@ const Navbar = () => {
                 setActiveLink("#contact");
                 setIsOpen(false);
               }}
-              className={`get-quote-pill w-full mt-2 text-center py-4 bg-accent text-white font-black uppercase tracking-[0.2em] shadow-2xl ${
-                activeLink === "#contact" ? "active" : ""
-              }`}
+              className={`get-quote-pill w-full mt-2 text-center py-4 bg-accent text-white font-black uppercase tracking-[0.2em] shadow-2xl ${activeLink === "#contact" ? "active" : ""
+                }`}
             >
               Get Quote
             </a>
