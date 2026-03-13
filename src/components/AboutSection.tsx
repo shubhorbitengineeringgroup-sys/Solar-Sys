@@ -1,4 +1,6 @@
 import { Zap, Shield, TrendingUp, Target, Sun } from "lucide-react";
+import { Counter } from "@/components/ui/counter";
+import coreValuesImg from "@/assets/core-values-neighborhood.png";
 
 const stats = [
   { icon: Zap, value: "500+", label: "Installations" },
@@ -7,10 +9,10 @@ const stats = [
   { icon: Target, value: "50MW+", label: "Capacity Deployed" },
 ];
 
-const missionPoints = [
-  "To pioneer energy transformation by developing and deploying accessible, reliable and scalable renewable energy solutions.",
-  "To innovate, harness, commercialise and accelerate the use of renewable energy across India, including the remotest corners.",
-  "To be the most trusted partner for all stakeholders and beneficiaries, creating long-term value through responsible and sustainable practices.",
+const valuePoints = [
+  { title: "Innovation", text: "To pioneer energy transformation by developing and deploying accessible, reliable and scalable renewable energy solutions." },
+  { title: "Accessibility", text: "To innovate, harness, commercialise and accelerate the use of renewable energy across India, including the remotest corners." },
+  { title: "Integrity", text: "To be the most trusted partner for all stakeholders and beneficiaries, creating long-term value through responsible and sustainable practices." },
 ];
 
 const AboutSection = () => {
@@ -60,7 +62,7 @@ const AboutSection = () => {
                 <div className="absolute top-0 right-0 w-20 h-20 bg-accent/5 rounded-full -mr-10 -mt-10 blur-2xl group-hover:bg-accent/10 transition-colors" />
                 <stat.icon className="w-8 h-8 mb-6 text-accent group-hover:scale-110 transition-transform duration-300" />
                 <div className="text-3xl font-heading font-black text-foreground mb-2">
-                  {stat.value}
+                  <Counter target={stat.value} />
                 </div>
                 <div className="text-xs text-muted-foreground uppercase tracking-widest font-bold">
                   {stat.label}
@@ -79,7 +81,7 @@ const AboutSection = () => {
               <div className="p-12 lg:p-16 flex flex-col justify-center space-y-8">
                 <div>
                   <h3 className="text-3xl sm:text-5xl font-heading font-black text-foreground mb-4">
-                    Our <span className="photon-gradient-text">Mission</span>
+                    Our <span className="photon-gradient-text">Core Values</span>
                   </h3>
                   <div className="flex items-center gap-2">
                     <div className="h-1 w-12 rounded-full bg-accent" />
@@ -90,23 +92,28 @@ const AboutSection = () => {
 
                 <div className="space-y-4">
                   <p className="text-xs font-black tracking-[.2em] uppercase text-accent">
-                    Mission Statement
+                    Our Philosophy
                   </p>
                   <p className="text-lg text-muted-foreground font-light leading-relaxed">
-                    We believe that renewable energy is the key to building a better future, and
-                    we are passionate about making it a reality for everyone.
+                    Our philosophy is rooted in sustainability, engineering excellence, and 
+                    a deep-seated commitment to making India energy-independent.
                   </p>
                 </div>
 
-                <ul className="space-y-4">
-                  {missionPoints.map((point, idx) => (
+                <ul className="space-y-6">
+                  {valuePoints.map((point, idx) => (
                     <li key={idx} className="flex items-start gap-4 group/item">
-                      <div className="mt-1 w-6 h-6 rounded-full bg-accent/10 flex items-center justify-center text-accent group-hover/item:bg-accent group-item/item:text-white transition-all duration-300 flex-shrink-0">
+                      <div className="mt-1 w-6 h-6 rounded-full bg-accent/10 flex items-center justify-center text-accent group-hover/item:bg-accent group-hover/item:text-white transition-all duration-300 flex-shrink-0">
                         <Zap size={12} />
                       </div>
-                      <span className="text-muted-foreground leading-relaxed">
-                        {point}
-                      </span>
+                      <div className="space-y-1">
+                        <h4 className="font-bold text-foreground group-hover/item:text-accent transition-colors">
+                          {point.title}
+                        </h4>
+                        <p className="text-muted-foreground text-sm leading-relaxed">
+                          {point.text}
+                        </p>
+                      </div>
                     </li>
                   ))}
                 </ul>
@@ -117,7 +124,7 @@ const AboutSection = () => {
                 <div className="absolute inset-0 opacity-20 pointer-events-none" 
                      style={{ backgroundImage: `radial-gradient(circle at 1px 1px, hsl(var(--accent)) 1px, transparent 0)`, backgroundSize: '16px 16px' }} />
                 <img
-                  src="/about-first.png"
+                  src={coreValuesImg}
                   alt="Solar energy illustration"
                   className="w-full h-auto object-contain drop-shadow-2xl z-10 hover:scale-105 transition-transform duration-700"
                   style={{ maxHeight: "400px" }}

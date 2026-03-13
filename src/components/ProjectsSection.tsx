@@ -1,13 +1,13 @@
 import project1Img from "@/assets/residential-rooftop-project.png";
 import commercialImg from "@/assets/commercial-solar-project.jpg";
 import factoryImg from "@/assets/factory-rooftop-project.jpg";
-import project4Img from "@/assets/project-4.jpg";
+import officeImg from "@/assets/office-complex-project.jpg";
 
 const projects = [
   { img: project1Img, title: "Residential Rooftop System", location: "Suburban Home", kw: "10 kW", type: "Home" },
   { img: commercialImg, title: "Commercial Solar Farm", location: "Industrial Park", kw: "2.5 MW", type: "Commercial" },
   { img: factoryImg, title: "Factory Rooftop Installation", location: "Manufacturing Unit", kw: "500 kW", type: "Industrial" },
-  { img: commercialImg, title: "Office Complex Array", location: "Corporate Campus", kw: "800 kW", type: "Commercial" },
+  { img: officeImg, title: "Office Complex Array", location: "Corporate Campus", kw: "800 kW", type: "Commercial" },
 ];
 
 const ProjectsSection = () => {
