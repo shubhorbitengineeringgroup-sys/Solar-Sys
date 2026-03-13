@@ -1,4 +1,4 @@
-import { SunMedium, Home, Building2, Wrench, MessageSquare } from "lucide-react";
+import { SunMedium, Home, Building2, Wrench, MessageSquare, Cpu } from "lucide-react";
 
 const services = [
   {
@@ -30,6 +30,12 @@ const services = [
     title: "Solar Consultancy",
     description:
       "Expert guidance on system sizing, energy audits, feasibility studies, government subsidies, and ROI analysis. Make informed decisions with data-driven solar recommendations.",
+  },
+  {
+    icon: Cpu,
+    title: "IoT Application in Solar",
+    description:
+      "Harness the power of IoT to transform your solar infrastructure into a smart, connected ecosystem. Our IoT-enabled solar solutions provide real-time performance monitoring, predictive fault detection, and remote system control via cloud-based dashboards. Sensors and smart meters continuously collect energy generation and consumption data.",
   },
 ];
 

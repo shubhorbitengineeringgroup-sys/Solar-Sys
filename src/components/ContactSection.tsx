@@ -45,7 +45,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <div className="text-[10px] font-black uppercase tracking-widest text-accent mb-1">Call Us</div>
-                  <div className="text-xl font-bold text-foreground">+91 9039075049</div>
+                  <a href="tel:+919039075049" className="text-xl font-bold text-foreground hover:text-accent transition-colors">+91 9039075049</a>
                 </div>
               </div>
 
@@ -55,7 +55,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <div className="text-[10px] font-black uppercase tracking-widest text-accent mb-1">Website</div>
-                  <div className="text-xl font-bold text-foreground">www.solarsysllp.com</div>
+                  <a href="https://www.solarsysllp.com" target="_blank" rel="noopener noreferrer" className="text-xl font-bold text-foreground hover:text-accent transition-colors">www.solarsysllp.com</a>
                 </div>
               </div>
 
@@ -65,7 +65,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <div className="text-[10px] font-black uppercase tracking-widest text-accent mb-1">Email Us</div>
-                  <div className="text-xl font-bold text-foreground">solarsysllp@gmail.com</div>
+                  <a href="mailto:solarsysllp@gmail.com" className="text-xl font-bold text-foreground hover:text-accent transition-colors">solarsysllp@gmail.com</a>
                 </div>
               </div>
 
@@ -75,11 +75,16 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <div className="text-[10px] font-black uppercase tracking-widest text-accent mb-1">Our Office</div>
-                  <div className="text-lg font-bold text-foreground leading-snug">
+                  <a
+                    href="https://maps.google.com/?q=Flat+2,+Block+12,+Shalimar+Enclave,+Arera+Colony+E-3+Sector,+Huzur,+Bhopal,+Madhya+Pradesh+462016"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-lg font-bold text-foreground hover:text-accent transition-colors leading-snug block"
+                  >
                     Flat 2, Block 12, Shalimar Enclave, <br />
                     Arera Colony E-3 Sector, Huzur, Bhopal, <br />
                     Madhya Pradesh - 462016
-                  </div>
+                  </a>
                 </div>
               </div>
             </div>
