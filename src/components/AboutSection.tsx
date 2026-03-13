@@ -2,6 +2,7 @@ import { Zap, Shield, TrendingUp, Target, Sun } from "lucide-react";
 import { Counter } from "@/components/ui/counter";
 import coreValuesImg from "@/assets/core-values-neighborhood.png";
 
+
 const stats = [
   { icon: Zap, value: "500+", label: "Installations" },
   { icon: Shield, value: "15+", label: "Years Experience" },
@@ -14,6 +15,7 @@ const valuePoints = [
   { title: "Accessibility", text: "To innovate, harness, commercialise and accelerate the use of renewable energy across India, including the remotest corners." },
   { title: "Integrity", text: "To be the most trusted partner for all stakeholders and beneficiaries, creating long-term value through responsible and sustainable practices." },
 ];
+
 
 const AboutSection = () => {
   return (
@@ -32,6 +34,7 @@ const AboutSection = () => {
             <h2 className="text-3xl sm:text-5xl font-heading font-black text-foreground leading-tight">
               Leading the <br />
               <span className="photon-gradient-text">Energy Evolution</span>
+
             </h2>
             <div className="space-y-6 text-muted-foreground text-lg leading-relaxed font-light">
               <p>
@@ -133,6 +136,7 @@ const AboutSection = () => {
             </div>
           </div>
         </div>
+
       </div>
     </section>
   );

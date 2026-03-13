@@ -26,6 +26,7 @@ const HeroSection = () => {
             </span>
             Renewable Energy Excellence
           </div>
+
           
           <h1 className="text-6xl sm:text-7xl lg:text-8xl font-heading font-black leading-[1.05] text-white">
             Illuminate Your <br />
