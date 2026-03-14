@@ -4,7 +4,7 @@ import { Counter } from "@/components/ui/counter";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden bg-[#0a0f18]">
+    <section id="home" className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden bg-[#0a0f18]">
       {/* Background Image Layer with Motion */}
       <div
         className="absolute inset-0 z-0 bg-cover bg-center opacity-30 scale-110 animate-pulse-slow"
@@ -27,18 +27,18 @@ const HeroSection = () => {
             Renewable Energy Excellence
           </div>
 
-          
+
           <h1 className="text-6xl sm:text-7xl lg:text-8xl font-heading font-black leading-[1.05] text-white">
             Illuminate Your <br />
             <span className="photon-gradient-text">Sustainable</span> Future
           </h1>
-          
+
           <p className="text-xl sm:text-2xl text-white/70 max-w-2xl mx-auto leading-relaxed font-light">
-            SOLARSYS LLP transforms the way the world uses energy. We bridge the gap between 
-            innovation and accessibility with high-performance solar infrastructure 
+            SOLARSYS LLP transforms the way the world uses energy. We bridge the gap between
+            innovation and accessibility with high-performance solar infrastructure
             engineered for the next generation.
           </p>
-          
+
           <div className="flex flex-wrap justify-center gap-6 pt-4">
             <a href="#contact">
               <Button variant="photon" size="lg" className="h-16 px-12 text-xl rounded-full shadow-2xl shadow-accent/20 hover:shadow-accent/40 transition-all font-bold">
@@ -68,7 +68,7 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-      
+
       {/* Scroll indicator */}
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-50">
         <div className="w-1 h-12 rounded-full bg-gradient-to-t from-accent to-transparent" />

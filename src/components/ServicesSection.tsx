@@ -55,31 +55,31 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section id="services" className="py-24 relative overflow-hidden bg-[#1e293b]">
-      {/* Background Image Layer */}
-      <div 
-        className="absolute inset-0 z-0 bg-cover bg-fixed bg-center opacity-60"
+    <section id="services" className="py-24 relative overflow-hidden bg-[#effaff]/5">
+      {/* Background Image Layer with very faint overlay */}
+      <div
+        className="absolute inset-0 z-0 bg-cover bg-fixed bg-center opacity-[0.3]"
         style={{ backgroundImage: `url(${servicesBg})` }}
       />
-      
+
       {/* Background Overlays & Accents */}
-      <div className="absolute inset-0 z-0 bg-gradient-to-b from-[#1e293b] via-[#1e293b]/10 to-[#1e293b]" />
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-accent/20 blur-[150px] rounded-full pointer-events-none opacity-40 z-0" />
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-primary/30 blur-[150px] rounded-full pointer-events-none opacity-40 z-0" />
+      <div className="absolute inset-0 z-0 bg-gradient-to-b from-[#effaff]/40 via-transparent to-[#effaff]/40" />
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-sky-400/10 blur-[150px] rounded-full pointer-events-none z-0" />
+      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-sky-500/10 blur-[150px] rounded-full pointer-events-none z-0" />
 
 
-      
+
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-20 space-y-4 max-w-3xl mx-auto">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent/10 border border-accent/20 text-accent font-black text-[10px] tracking-[.25em] uppercase">
             <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
             Our Expertise
           </div>
-          <h2 className="text-4xl sm:text-6xl font-heading font-black text-white tracking-tight leading-none">
+          <h2 className="text-4xl sm:text-6xl font-heading font-black text-slate-900 tracking-tight leading-none">
             Comprehensive <br />
             <span className="photon-gradient-text">Energy Ecosystem</span>
           </h2>
-          <p className="text-white/50 text-xl font-light max-w-2xl mx-auto leading-relaxed">
+          <p className="text-slate-600 text-xl font-light max-w-2xl mx-auto leading-relaxed">
             Revolutionizing the solar landscape through specialized engineering
             and cutting-edge maintenance frameworks.
           </p>
@@ -91,13 +91,12 @@ const ServicesSection = () => {
               key={service.title}
               className="group relative h-[480px] rounded-[2.5rem] overflow-hidden bg-white/5 backdrop-blur-md border border-white/10 hover:border-accent/50 transition-all duration-700 hover:-translate-y-2 shadow-2xl"
             >
-              {/* Image Layer within Card */}
               <div className="absolute inset-0 z-0">
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0f18] via-[#0a0f18]/80 to-transparent z-10 opacity-90 group-hover:opacity-100 transition-opacity duration-700" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent z-10 opacity-70 group-hover:opacity-80 transition-opacity duration-700" />
                 <img
                   src={service.image}
                   alt={service.title}
-                  className="w-full h-full object-cover scale-110 group-hover:scale-100 transform transition-transform duration-1000 ease-out grayscale-[20%] group-hover:grayscale-0"
+                  className="w-full h-full object-cover scale-110 group-hover:scale-100 transform transition-transform duration-1000 ease-out"
                 />
               </div>
 

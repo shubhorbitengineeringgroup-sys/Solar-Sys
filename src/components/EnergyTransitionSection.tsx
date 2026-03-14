@@ -16,7 +16,7 @@ const EnergyTransitionSection = () => {
                 className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0a0f18]/80 via-transparent to-transparent" />
-              
+
               {/* Overlay labels */}
               <div className="absolute bottom-6 left-6 right-6 flex justify-between items-end">
                 <div className="bg-red-500/20 backdrop-blur-md border border-red-500/30 px-4 py-2 rounded-lg flex items-center gap-2">
@@ -36,20 +36,20 @@ const EnergyTransitionSection = () => {
             <div className="inline-block px-3 py-1 rounded-full bg-accent/10 border border-accent/20 text-accent font-bold text-[10px] tracking-widest uppercase">
               The Evolution of Power
             </div>
-            
+
             <h2 className="text-3xl sm:text-5xl font-heading font-black leading-tight">
               Why the World is <br />
               <span className="photon-gradient-text">Switching to Solar</span>
             </h2>
-            
+
             <div className="space-y-6 text-white/70 text-lg leading-relaxed font-light">
               <p>
-                The era of heavy industrial pollution is coming to an end. Traditional power plants 
+                The era of heavy industrial pollution is coming to an end. Traditional power plants
                 rely on depleting resources and release tons of CO₂ into our atmosphere every hour.
               </p>
               <p className="font-normal text-white">
-                SOLARSYS LLP bridges the gap to a cleaner tomorrow. By transforming your roof 
-                into a mini-power plant, you're not just saving money — you're activeley 
+                SOLARSYS LLP bridges the gap to a cleaner tomorrow. By transforming your roof
+                into a mini-power plant, you're not just saving money — you're activeley
                 choosing to stop the cycle of environmental damage.
               </p>
             </div>
