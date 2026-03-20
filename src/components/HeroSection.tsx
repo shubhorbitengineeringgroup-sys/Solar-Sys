@@ -1,4 +1,5 @@
 import heroBg from "@/assets/hero-solar.jpg";
+import heroEarth from "@/assets/hero-earth.jpg";
 import { Button } from "@/components/ui/button";
 import { Counter } from "@/components/ui/counter";
 
@@ -16,56 +17,104 @@ const HeroSection = () => {
       <div className="absolute top-1/4 -right-20 w-[600px] h-[600px] bg-accent/10 rounded-full blur-[120px] z-0 animate-blob" />
       <div className="absolute -bottom-20 -left-20 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[100px] z-0 animate-blob animation-delay-2000" />
 
-      <div className="container mx-auto px-4 relative z-10 text-center">
-        {/* Centered Content */}
-        <div className="max-w-4xl mx-auto space-y-10 opacity-0 animate-fade-up">
-          <div className="inline-flex items-center gap-2 px-6 py-2 rounded-full border border-white/10 bg-white/5 text-xs font-bold text-accent tracking-[.3em] uppercase backdrop-blur-md">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
-            </span>
-            Renewable Energy Excellence
+      <div className="container mx-auto px-4 relative z-10">
+        {/* Two-column layout: Left text | Right image */}
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+
+          {/* LEFT — Text Content */}
+          <div className="space-y-10 opacity-0 animate-fade-up text-center lg:text-left">
+            <div className="inline-flex items-center gap-2 px-6 py-2 rounded-full border border-white/10 bg-white/5 text-xs font-bold text-accent tracking-[.3em] uppercase backdrop-blur-md">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
+              </span>
+              Renewable Energy Excellence
+            </div>
+
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-heading font-black leading-[1.05] text-white">
+              Illuminate Your <br />
+              <span className="photon-gradient-text">Sustainable</span> Future
+            </h1>
+
+            <p className="text-xl sm:text-2xl text-white/70 max-w-2xl leading-relaxed font-light">
+              SOLARSYS LLP transforms the way the world uses energy. We bridge the gap between
+              innovation and accessibility with high-performance solar infrastructure
+              engineered for the next generation.
+            </p>
+
+            <div className="flex flex-wrap justify-center lg:justify-start gap-6 pt-4">
+              <a href="#contact">
+                <Button variant="photon" size="lg" className="h-16 px-12 text-xl rounded-full shadow-2xl shadow-accent/20 hover:shadow-accent/40 transition-all font-bold">
+                  Get Started
+                </Button>
+              </a>
+              <a href="#about">
+                <Button variant="outline" size="lg" className="h-16 px-12 text-xl rounded-full border-white/20 text-white hover:bg-white/5 bg-transparent font-medium">
+                  Our Story
+                </Button>
+              </a>
+            </div>
+
+            <div className="grid grid-cols-3 gap-8 pt-10 border-t border-white/10">
+              <div>
+                <div className="text-3xl sm:text-4xl font-bold text-white"><Counter target="15+" /></div>
+                <div className="text-sm text-white/50 uppercase tracking-widest mt-1">Years Exp</div>
+              </div>
+              <div>
+                <div className="text-3xl sm:text-4xl font-bold text-white"><Counter target="500+" /></div>
+                <div className="text-sm text-white/50 uppercase tracking-widest mt-1">Projects</div>
+              </div>
+              <div>
+                <div className="text-3xl sm:text-4xl font-bold text-white"><Counter target="99%" /></div>
+                <div className="text-sm text-white/50 uppercase tracking-widest mt-1">Reliability</div>
+              </div>
+            </div>
           </div>
 
+          {/* RIGHT — Earth Illustration */}
+          <div className="hidden lg:flex items-center justify-center relative">
 
-          <h1 className="text-6xl sm:text-7xl lg:text-8xl font-heading font-black leading-[1.05] text-white">
-            Illuminate Your <br />
-            <span className="photon-gradient-text">Sustainable</span> Future
-          </h1>
+            {/* Soft ambient glow behind */}
+            <div className="absolute w-[500px] h-[500px] rounded-full bg-accent/10 blur-3xl animate-pulse-slow" />
 
-          <p className="text-xl sm:text-2xl text-white/70 max-w-2xl mx-auto leading-relaxed font-light">
-            SOLARSYS LLP transforms the way the world uses energy. We bridge the gap between
-            innovation and accessibility with high-performance solar infrastructure
-            engineered for the next generation.
-          </p>
+            {/* Outer subtle orbit ring */}
+            <div
+              className="absolute w-[455px] h-[455px] rounded-full border border-accent/20"
+              style={{ boxShadow: '0 0 25px rgba(255,160,0,0.07)' }}
+            />
 
-          <div className="flex flex-wrap justify-center gap-6 pt-4">
-            <a href="#contact">
-              <Button variant="photon" size="lg" className="h-16 px-12 text-xl rounded-full shadow-2xl shadow-accent/20 hover:shadow-accent/40 transition-all font-bold">
-                Get Started
-              </Button>
-            </a>
-            <a href="#about">
-              <Button variant="outline" size="lg" className="h-16 px-12 text-xl rounded-full border-white/20 text-white hover:bg-white/5 bg-transparent font-medium">
-                Our Story
-              </Button>
-            </a>
+            {/* Earth axial tilt wrapper (~23.5deg like real Earth) */}
+            <div
+              className="relative z-10"
+              style={{ transform: 'rotate(-23.5deg)' }}
+            >
+              {/* Rotating circle — clips white via overflow-hidden */}
+              <div
+                className="w-[400px] h-[400px] rounded-full overflow-hidden animate-spin-slow"
+                style={{
+                  animationDuration: "60s",
+                  animationTimingFunction: "linear",
+                  boxShadow: '0 0 0 1.5px rgba(255,160,0,0.18), 0 0 50px rgba(255,160,0,0.12)'
+                }}
+              >
+                <img
+                  src={heroEarth}
+                  alt="Sustainable Earth with Solar Energy"
+                  className="w-full h-full object-cover scale-110"
+                />
+              </div>
+
+              {/* Day/Night shadow overlay — simulates real Earth lighting */}
+              <div
+                className="absolute inset-0 rounded-full pointer-events-none"
+                style={{
+                  background: 'radial-gradient(ellipse at 70% 50%, transparent 35%, rgba(5,10,20,0.55) 70%, rgba(5,10,20,0.85) 100%)',
+                  zIndex: 2
+                }}
+              />
+            </div>
           </div>
 
-          <div className="grid grid-cols-3 gap-12 pt-16 border-t border-white/10 max-w-3xl mx-auto">
-            <div>
-              <div className="text-3xl sm:text-4xl font-bold text-white"><Counter target="15+" /></div>
-              <div className="text-sm text-white/50 uppercase tracking-widest mt-1">Years Exp</div>
-            </div>
-            <div>
-              <div className="text-3xl sm:text-4xl font-bold text-white"><Counter target="500+" /></div>
-              <div className="text-sm text-white/50 uppercase tracking-widest mt-1">Projects</div>
-            </div>
-            <div>
-              <div className="text-3xl sm:text-4xl font-bold text-white"><Counter target="99%" /></div>
-              <div className="text-sm text-white/50 uppercase tracking-widest mt-1">Reliability</div>
-            </div>
-          </div>
         </div>
       </div>
 

@@ -4,7 +4,8 @@ import residentialRooftop from "@/assets/residential-rooftop-project.png";
 import commercialSolar from "@/assets/commercial-solar-project.jpg";
 import solarMonitoring from "@/assets/solar-monitoring.png";
 import industrialConsultancy from "@/assets/industrial-solar.png";
-import iotRenewable from "@/assets/renewable-energy-comparison.png";
+import solarConsultancyImg from "@/assets/solar-consultancy.jpg";
+import iotRenewable from "@/assets/iot-solar-smart.png";
 import servicesBg from "@/assets/factory-rooftop-project.jpg";
 
 
@@ -40,7 +41,7 @@ const services = [
   {
     icon: MessageSquare,
     title: "Solar Consultancy",
-    image: industrialConsultancy,
+    image: solarConsultancyImg,
     description:
       "Expert guidance on system sizing, energy audits, feasibility studies, government subsidies, and ROI analysis. Make informed decisions with data-driven solar recommendations.",
   },

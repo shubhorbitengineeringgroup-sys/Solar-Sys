@@ -1,4 +1,4 @@
-import solarPanelImg from "@/assets/industrial-solar.png";
+import solarPanelImg from "@/assets/high-efficiency-solar-panels.jpg";
 import solarInverterImg from "@/assets/hybrid-inverter.png";
 import solarBatteryImg from "@/assets/battery-storage.png";
 import solarChargeControllerImg from "@/assets/service-installation.png";
