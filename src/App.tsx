@@ -41,12 +41,14 @@ const ScrollHandler = () => {
   return null;
 };
 
+const basename = typeof window !== "undefined" && window.location.pathname.startsWith("/Solar-Sys") ? "/Solar-Sys" : "";
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter basename={basename}>
         <ScrollHandler />
         <Routes>
           <Route path="/" element={<Index />} />
