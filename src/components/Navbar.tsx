@@ -1,14 +1,15 @@
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, PhoneCall, MapPin } from "lucide-react";
 import { useLocation, useNavigate } from "react-router-dom";
 
 const links = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
+  { label: "Services", href: "#services" },
+  { label: "Bhopal Hub", href: "#bhopal-solar" },
   { label: "Products", href: "#products" },
   { label: "Projects", href: "#projects" },
   { label: "Why Us", href: "#why-us" },
-  { label: "Services", href: "#services" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -133,14 +134,24 @@ const Navbar = () => {
                 {link.label}
               </a>
             ))}
-            <div className="pt-2">
+            <div className="pt-2 space-y-2">
               <a
                 href="#contact"
                 onClick={(e) => handleNavClick(e, "#contact")}
-                className="w-full text-center py-3.5 px-4 rounded-full bg-accent text-white font-bold uppercase tracking-[0.15em] shadow-lg shadow-accent/25 hover:bg-accent/90 transition-all block text-xs"
+                className="w-full text-center py-3.5 px-4 rounded-full bg-accent text-slate-950 font-black uppercase tracking-[0.15em] shadow-lg shadow-accent/25 hover:bg-accent/90 transition-all block text-xs"
               >
-                Get Quote
+                Get Free Solar Quote
               </a>
+              <a
+                href="tel:+917024033333"
+                className="w-full text-center py-2.5 px-4 rounded-full bg-muted/60 text-foreground font-bold flex items-center justify-center gap-2 text-xs border border-border/60 hover:bg-muted transition-all"
+              >
+                <PhoneCall className="w-3.5 h-3.5 text-accent" /> +91 7024033333
+              </a>
+              <div className="text-[11px] text-muted-foreground flex items-center justify-center gap-1.5 pt-1 text-center">
+                <MapPin className="w-3 h-3 text-accent shrink-0" />
+                <span>Arera Colony E-2 Sector, Bhopal, MP</span>
+              </div>
             </div>
           </div>
         </div>

@@ -1,0 +1,36 @@
+# SOLARSYS LLP — Clean Energy & Green Infrastructure Solutions
+
+> SOLARSYS (LLP) is Bhopal's premier clean energy engineering and solar EPC company, specializing in rooftop and ground-mounted solar systems, wind, geothermal, biomass & biogas, and advanced battery energy storage systems (BESS). Headquartered in Arera Colony, Bhopal, Madhya Pradesh, India, SOLARSYS delivers turnkey green energy infrastructure nationwide and worldwide.
+
+## Core Documentation
+- [Comprehensive Knowledge Base & Technical Specs](https://solarsysllp.com/llms-full.txt): In-depth engineering specifications, government subsidy guides, technical datasheets, and company credentials.
+- [XML Sitemap](https://solarsysllp.com/sitemap.xml): Complete machine-readable XML route directory.
+
+## Clean Energy Portfolio & Services
+- [Solar Energy Solutions (Rooftop & Ground EPC)](https://solarsysllp.com/#services): Residential, commercial complexes, industrial plants, and utility infrastructure with MPMKVVCL net-metering synchronization.
+- [Wind Energy Systems](https://solarsysllp.com/#services): Clean kinetic power generation, wind resource feasibility studies, and solar-wind hybrid grid tie-ins.
+- [Geothermal Energy Infrastructure](https://solarsysllp.com/#services): Subterranean earth heat extraction for continuous 24/7/365 baseload clean power.
+- [Biomass & Biogas Power Systems](https://solarsysllp.com/#services): Converting agricultural residues and organic waste into clean renewable electricity and bio-CNG.
+- [Battery Energy Storage Systems (BESS)](https://solarsysllp.com/#services): High-cycle Lithium Iron Phosphate (LiFePO4) energy storage and IoT cloud microgrid telemetry.
+- [Turnkey EPC & Commissioning](https://solarsysllp.com/#services): End-to-end engineering, DISCOM liaison, subsidy documentation, and 25-year lifecycle maintenance.
+
+## Bhopal Solar Hub & Government Subsidies
+- [PM Surya Ghar Muft Bijli Yojana & Bhopal Hub](https://solarsysllp.com/#bhopal-solar): Direct central subsidies up to ₹78,000 for residential rooftop solar in Bhopal, MPMKVVCL bi-directional net-metering approvals, and 40% commercial accelerated tax depreciation.
+
+## Core Products & Systems
+- [High-Efficiency Solar Systems](https://solarsysllp.com/#products): Tier-1 Monocrystalline PERC solar panels (450W - 550W+, 21.5% efficiency), residential and commercial rooftop arrays.
+- [Integrated Renewable Power Systems](https://solarsysllp.com/#products): Hybrid on-grid/off-grid inverters (dual MPPT, 98.2% efficiency), solar water pumps (0.5 HP - 10 HP), and solar street lighting.
+- [Energy Storage & Automation Solutions](https://solarsysllp.com/#products): LiFePO4 battery modules (5.12 kWh - 10.24 kWh, 6000+ deep cycles) and smart IoT cloud telemetry.
+
+## Regional EPC Showcase (Bhopal & Central India)
+- [Featured Projects](https://solarsysllp.com/#projects): Luxury residence 15 kW in Arera Colony Bhopal, Mandideep Industrial Solar 1.2 MW captive plant, Govindpura Commercial Complex 350 kW, and Hoshangabad Road institutional campus 500 kW.
+
+## Company Verification & Contact
+- [Contact SOLARSYS LLP](https://solarsysllp.com/#contact):
+  - Legal Entity: SOLARSYS (LLP)
+  - Registered Headquarters: Flat 2, Block 12, Shalimar Enclave, Arera Colony E-2 Sector, Huzur, Bhopal, Madhya Pradesh 462016, India
+  - Primary Hotline: +91 7024033333
+  - Support Line: +91 9039075049
+  - Corporate Email: solarsysllp@gmail.com
+  - Web Portal: https://solarsysllp.com
+  - Geographic Coordinates: 23.215635 N, 77.430489 E

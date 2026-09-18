@@ -12,7 +12,11 @@ const EnergyTransitionSection = () => {
             <div className="relative rounded-2xl sm:rounded-[2rem] overflow-hidden border border-white/10 shadow-2xl">
               <img
                 src={transitionImg}
-                alt="Transition from traditional power to solar energy"
+                alt="Transition from traditional power to solar energy - SOLARSYS LLP"
+                loading="lazy"
+                decoding="async"
+                width={600}
+                height={400}
                 className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0a0f18]/80 via-transparent to-transparent" />

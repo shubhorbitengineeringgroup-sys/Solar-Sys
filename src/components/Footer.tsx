@@ -1,14 +1,25 @@
-import { Github, Instagram, Linkedin, Twitter } from "lucide-react";
+import { Github, Instagram, Linkedin, Twitter, MapPin } from "lucide-react";
 import { useLocation, useNavigate } from "react-router-dom";
 
 const exploreLinks = [
   { label: "Home", href: "#home" },
   { label: "About Us", href: "#about" },
   { label: "Services", href: "#services" },
+  { label: "Bhopal Hub", href: "#bhopal-solar" },
   { label: "Products", href: "#products" },
   { label: "Projects", href: "#projects" },
   { label: "Why Us", href: "#why-us" },
   { label: "Contact", href: "#contact" },
+];
+
+const capabilities = [
+  "Solar Energy Solutions",
+  "Wind Energy Systems",
+  "Geothermal Energy",
+  "Biomass & Biogas",
+  "Battery Storage (BESS)",
+  "Smart Monitoring & IoT",
+  "MPMKVVCL Net-Metering",
 ];
 
 const Footer = () => {
@@ -47,8 +58,14 @@ const Footer = () => {
               </span>
             </div>
             <p className="text-white/60 text-sm leading-relaxed max-w-xs font-light">
-              Empowering businesses and homes with sustainable energy solutions for a cleaner, greener future. We bridge the gap between innovation and environmental efficiency.
+              <strong className="text-white font-medium">SOLARSYS (LLP)</strong> — Clean Energy for a Sustainable Future. Precision green energy engineering and infrastructure solutions in Bhopal, Madhya Pradesh, and worldwide.
             </p>
+            <div className="flex items-start gap-2 text-xs text-white/50 leading-relaxed pt-1">
+              <MapPin className="w-4 h-4 text-accent shrink-0 mt-0.5" />
+              <span>
+                Flat 2, Block 12, Shalimar Enclave, Arera Colony E-2 Sector, Bhopal, MP 462016
+              </span>
+            </div>
             <div className="flex gap-3 pt-2">
               {[Twitter, Linkedin, Github, Instagram].map((Icon, i) => (
                 <a
@@ -85,36 +102,13 @@ const Footer = () => {
           <div>
             <h3 className="text-xs font-black uppercase tracking-[0.25em] mb-6 sm:mb-8 text-white/90">Capabilities</h3>
             <ul className="space-y-3 sm:space-y-4 text-sm font-medium text-white/60">
-              <li>
-                <span className="hover:text-accent transition-colors inline-block cursor-default">
-                  Solar Installation
-                </span>
-              </li>
-              <li>
-                <span className="hover:text-accent transition-colors inline-block cursor-default">
-                  Energy Storage
-                </span>
-              </li>
-              <li>
-                <span className="hover:text-accent transition-colors inline-block cursor-default">
-                  Smart Monitoring
-                </span>
-              </li>
-              <li>
-                <span className="hover:text-accent transition-colors inline-block cursor-default">
-                  Hybrid Systems
-                </span>
-              </li>
-              <li>
-                <span className="hover:text-accent transition-colors inline-block cursor-default">
-                  Maintenance & Support
-                </span>
-              </li>
-              <li>
-                <span className="hover:text-accent transition-colors inline-block cursor-default">
-                  Consultation
-                </span>
-              </li>
+              {capabilities.map((cap) => (
+                <li key={cap}>
+                  <span className="hover:text-accent transition-colors inline-block cursor-default">
+                    {cap}
+                  </span>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -124,10 +118,16 @@ const Footer = () => {
               <h3 className="text-xs font-black uppercase tracking-[0.25em] mb-6 sm:mb-8 text-white/90">Contact</h3>
               <div className="space-y-3">
                 <a
-                  href="tel:+919039075049"
+                  href="tel:+917024033333"
                   className="block text-accent text-base sm:text-lg font-bold hover:opacity-80 transition-opacity"
                 >
-                  +91 9039075049
+                  +91 7024033333 <span className="text-xs text-white/50 font-normal">(Primary)</span>
+                </a>
+                <a
+                  href="tel:+919039075049"
+                  className="block text-accent/80 text-sm font-semibold hover:opacity-80 transition-opacity"
+                >
+                  +91 9039075049 <span className="text-xs text-white/50 font-normal">(Support)</span>
                 </a>
                 <a
                   href="mailto:solarsysllp@gmail.com"
@@ -151,7 +151,7 @@ const Footer = () => {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
                 </div>
-                <span className="text-xs font-bold text-white/80">Renewable Grid Active</span>
+                <span className="text-xs font-bold text-white/80">Renewable Grid Active • Bhopal</span>
               </div>
             </div>
           </div>
@@ -159,11 +159,13 @@ const Footer = () => {
 
         <div className="mt-12 sm:mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
           <p className="text-[10px] sm:text-xs text-white/40 tracking-[0.15em] font-medium uppercase">
-            &copy; {new Date().getFullYear()} SOLARSYS LLP. PRECISION ENGINEERED SUSTAINABILITY.
+            &copy; {new Date().getFullYear()} SOLARSYS LLP. PRECISION ENGINEERED SUSTAINABILITY. BHOPAL, MP, INDIA.
           </p>
           <div className="flex flex-wrap justify-center gap-6 text-[10px] sm:text-xs text-white/40 tracking-wider font-medium uppercase">
             <a href="#about" className="hover:text-accent transition-colors">Privacy Policy</a>
             <a href="#about" className="hover:text-accent transition-colors">Terms of Service</a>
+            <a href="/sitemap.xml" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">Sitemap</a>
+            <a href="/llms.txt" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors text-accent/80 font-bold">LLMs.txt (AI Spec)</a>
           </div>
         </div>
       </div>

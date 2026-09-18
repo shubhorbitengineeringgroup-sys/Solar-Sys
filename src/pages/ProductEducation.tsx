@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { productsData } from "@/lib/products-data";
 import { MoveLeft, Lightbulb, Share2, Info, ArrowRight } from "lucide-react";
@@ -7,6 +8,12 @@ import Footer from "@/components/Footer";
 const ProductEducation = () => {
   const { productId } = useParams<{ productId: string }>();
   const product = productId ? productsData[productId] : null;
+
+  useEffect(() => {
+    if (product) {
+      document.title = `${product.title} Guide & Varieties | SOLARSYS LLP`;
+    }
+  }, [product]);
 
   if (!product) {
     return (
@@ -41,7 +48,15 @@ const ProductEducation = () => {
               </div>
               <div className="hidden lg:block">
                  <div className="w-32 h-32 rounded-3xl overflow-hidden border-4 border-white shadow-2xl rotate-3">
-                    <img src={product.image} className="w-full h-full object-cover" alt="" />
+                     <img
+                       src={product.image}
+                       className="w-full h-full object-cover"
+                       alt={`${product.title} Technology - SOLARSYS LLP Bhopal`}
+                       width={128}
+                       height={128}
+                       loading="lazy"
+                       decoding="async"
+                     />
                  </div>
               </div>
             </div>

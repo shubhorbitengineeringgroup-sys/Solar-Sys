@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { productsData } from "@/lib/products-data";
 import { MoveLeft, CheckCircle2, Zap, Settings, ShieldCheck, Globe, Clock, Shield } from "lucide-react";
@@ -7,6 +8,12 @@ import Footer from "@/components/Footer";
 const ProductDetail = () => {
   const { productId } = useParams<{ productId: string }>();
   const product = productId ? productsData[productId] : null;
+
+  useEffect(() => {
+    if (product) {
+      document.title = `${product.title} | SOLARSYS LLP Bhopal Clean Energy`;
+    }
+  }, [product]);
 
   if (!product) {
     return (
@@ -37,7 +44,10 @@ const ProductDetail = () => {
               <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-border/50 shadow-2xl">
                 <img 
                   src={product.image} 
-                  alt={product.title} 
+                  alt={`${product.title} - SOLARSYS LLP Bhopal`} 
+                  width={800}
+                  height={600}
+                  decoding="async"
                   className="w-full h-full object-cover"
                 />
               </div>
