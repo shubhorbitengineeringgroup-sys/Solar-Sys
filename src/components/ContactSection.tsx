@@ -104,7 +104,7 @@ const ContactSection = () => {
                     required
                     value={form.name}
                     onChange={(e) => setForm({ ...form, name: e.target.value })}
-                    className="w-full px-4 py-3 sm:px-5 sm:py-4 rounded-xl sm:rounded-2xl bg-background/50 border border-border/50 text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-accent/20 transition-all font-medium"
+                    className="w-full px-4 py-3 sm:px-5 sm:py-4 rounded-xl sm:rounded-2xl bg-background/50 border border-border/50 text-foreground text-base sm:text-sm focus:outline-none focus:ring-2 focus:ring-accent/20 transition-all font-medium"
                     placeholder="Enter your name"
                   />
                 </div>
@@ -117,7 +117,7 @@ const ContactSection = () => {
                     required
                     value={form.email}
                     onChange={(e) => setForm({ ...form, email: e.target.value })}
-                    className="w-full px-4 py-3 sm:px-5 sm:py-4 rounded-xl sm:rounded-2xl bg-background/50 border border-border/50 text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-accent/20 transition-all font-medium"
+                    className="w-full px-4 py-3 sm:px-5 sm:py-4 rounded-xl sm:rounded-2xl bg-background/50 border border-border/50 text-foreground text-base sm:text-sm focus:outline-none focus:ring-2 focus:ring-accent/20 transition-all font-medium"
                     placeholder="your@email.com"
                   />
                 </div>
@@ -131,7 +131,7 @@ const ContactSection = () => {
                   rows={4}
                   value={form.message}
                   onChange={(e) => setForm({ ...form, message: e.target.value })}
-                  className="w-full px-4 py-3 sm:px-5 sm:py-4 rounded-xl sm:rounded-2xl bg-background/50 border border-border/50 text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-accent/20 transition-all font-medium resize-none"
+                  className="w-full px-4 py-3 sm:px-5 sm:py-4 rounded-xl sm:rounded-2xl bg-background/50 border border-border/50 text-foreground text-base sm:text-sm focus:outline-none focus:ring-2 focus:ring-accent/20 transition-all font-medium resize-none"
                   placeholder="Tell us about your requirements..."
                 />
               </div>

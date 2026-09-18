@@ -1,6 +1,34 @@
 import { Github, Instagram, Linkedin, Twitter } from "lucide-react";
+import { useLocation, useNavigate } from "react-router-dom";
+
+const exploreLinks = [
+  { label: "Home", href: "#home" },
+  { label: "About Us", href: "#about" },
+  { label: "Services", href: "#services" },
+  { label: "Products", href: "#products" },
+  { label: "Projects", href: "#projects" },
+  { label: "Why Us", href: "#why-us" },
+  { label: "Contact", href: "#contact" },
+];
 
 const Footer = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    if (location.pathname !== "/") {
+      navigate("/" + href);
+    } else {
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      } else {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    }
+  };
+
   return (
     <footer className="bg-[#050a11] text-white py-12 sm:py-16 border-t border-white/5 relative overflow-hidden">
       {/* Subtle background glow */}
@@ -39,36 +67,17 @@ const Footer = () => {
           <div>
             <h3 className="text-xs font-black uppercase tracking-[0.25em] mb-6 sm:mb-8 text-white/90">Explore</h3>
             <ul className="space-y-3 sm:space-y-4 text-sm font-medium text-white/60">
-              <li>
-                <a href="/#home" className="hover:text-accent transition-all hover:translate-x-1 inline-block">
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href="/#about" className="hover:text-accent transition-all hover:translate-x-1 inline-block">
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a href="/#services" className="hover:text-accent transition-all hover:translate-x-1 inline-block">
-                  Services
-                </a>
-              </li>
-              <li>
-                <a href="/#products" className="hover:text-accent transition-all hover:translate-x-1 inline-block">
-                  Products
-                </a>
-              </li>
-              <li>
-                <a href="/#projects" className="hover:text-accent transition-all hover:translate-x-1 inline-block">
-                  Projects
-                </a>
-              </li>
-              <li>
-                <a href="/#contact" className="hover:text-accent transition-all hover:translate-x-1 inline-block">
-                  Contact
-                </a>
-              </li>
+              {exploreLinks.map((item) => (
+                <li key={item.href}>
+                  <a
+                    href={`/${item.href}`}
+                    onClick={(e) => handleLinkClick(e, item.href)}
+                    className="hover:text-accent transition-all hover:translate-x-1 inline-block"
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 

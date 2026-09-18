@@ -80,14 +80,16 @@ const Navbar = () => {
         </a>
 
         {/* Desktop links */}
-        <div className="hidden md:flex items-center gap-2 lg:gap-3 px-1">
+        <div className="hidden lg:flex items-center gap-1.5 xl:gap-2 px-1">
           {links.map((link) => (
             <a
               key={link.href}
               href={link.href}
               onClick={(e) => handleNavClick(e, link.href)}
-              className={`get-quote-pill text-[10px] lg:text-xs px-2.5 lg:px-3.5 py-1.5 ${
-                activeLink === link.href ? "active" : ""
+              className={`text-xs font-semibold px-3 py-1.5 rounded-full transition-all duration-200 ${
+                activeLink === link.href
+                  ? "text-accent bg-accent/10 font-bold"
+                  : "text-foreground/75 hover:text-foreground hover:bg-muted/60"
               }`}
             >
               {link.label}
@@ -96,9 +98,7 @@ const Navbar = () => {
           <a
             href="#contact"
             onClick={(e) => handleNavClick(e, "#contact")}
-            className={`get-quote-pill text-[10px] lg:text-xs px-3.5 lg:px-4 py-1.5 ml-1 lg:ml-2 ${
-              activeLink === "#contact" ? "active" : ""
-            }`}
+            className="get-quote-pill text-xs px-4 py-1.5 ml-2 font-bold uppercase tracking-wider"
           >
             Get Quote
           </a>
@@ -106,7 +106,7 @@ const Navbar = () => {
 
         {/* Mobile toggle */}
         <button
-          className="md:hidden p-2 rounded-xl text-foreground hover:bg-muted focus:outline-none focus:ring-2 focus:ring-accent transition-colors"
+          className="lg:hidden p-2 rounded-xl text-foreground hover:bg-muted focus:outline-none focus:ring-2 focus:ring-accent transition-colors"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
           aria-expanded={isOpen}
@@ -117,29 +117,31 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       {isOpen && (
-        <div className="md:hidden bg-background/95 backdrop-blur-2xl border-b border-border px-4 py-6 shadow-2xl max-h-[calc(100vh-4rem)] overflow-y-auto">
-          <div className="flex flex-col gap-3">
+        <div className="lg:hidden bg-background/95 backdrop-blur-2xl border-b border-border px-4 py-6 shadow-2xl max-h-[calc(100vh-4rem)] overflow-y-auto animate-in slide-in-from-top-2 duration-200">
+          <div className="flex flex-col gap-2">
             {links.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href)}
-                className={`get-quote-pill w-full text-center py-3 text-xs tracking-wider ${
-                  activeLink === link.href ? "active" : ""
+                className={`w-full text-left px-4 py-3 rounded-xl text-sm font-semibold transition-all ${
+                  activeLink === link.href
+                    ? "bg-accent/15 text-accent font-bold"
+                    : "text-foreground/80 hover:bg-muted hover:text-foreground"
                 }`}
               >
                 {link.label}
               </a>
             ))}
-            <a
-              href="#contact"
-              onClick={(e) => handleNavClick(e, "#contact")}
-              className={`get-quote-pill w-full mt-2 text-center py-3.5 bg-accent text-white font-black uppercase tracking-[0.2em] shadow-xl ${
-                activeLink === "#contact" ? "active" : ""
-              }`}
-            >
-              Get Quote
-            </a>
+            <div className="pt-2">
+              <a
+                href="#contact"
+                onClick={(e) => handleNavClick(e, "#contact")}
+                className="w-full text-center py-3.5 px-4 rounded-full bg-accent text-white font-bold uppercase tracking-[0.15em] shadow-lg shadow-accent/25 hover:bg-accent/90 transition-all block text-xs"
+              >
+                Get Quote
+              </a>
+            </div>
           </div>
         </div>
       )}

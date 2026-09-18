@@ -1,73 +1,101 @@
-# Welcome to your Lovable project
+# SOLARSYS LLP — Clean Energy Website
 
-## Project info
+Official website for **SOLARSYS LLP** ([solarsysllp.com](https://solarsysllp.com/)), engineered with React, TypeScript, Vite, Tailwind CSS, and shadcn/ui. Fully mobile-responsive and configured for automated deployment to GitHub Pages with custom domain support.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+---
 
-## How can I edit this code?
+## 🚀 Step-by-Step GitHub & GitHub Pages Deployment Guide
 
-There are several ways of editing your application.
+Since you do not currently have a GitHub repository created, follow these exact steps to launch the website live:
 
-**Use Lovable**
+### 1. Create a New Repository on GitHub
+1. Go to [GitHub.com](https://github.com/new) and log in.
+2. Click **New repository**.
+3. Name it (e.g., `solarsys-radiant-web` or `solarsys-website`).
+4. Choose **Public** (required for free GitHub Pages).
+5. Do **NOT** check "Initialize this repository with a README", `.gitignore`, or license (the codebase already has them).
+6. Click **Create repository**.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+### 2. Push Your Local Code to Your New GitHub Repository
+In your terminal (inside this project folder), run:
 
-Changes made via Lovable will be committed automatically to this repo.
+```bash
+# Rename current origin or set the new remote URL:
+git remote set-url origin https://github.com/<YOUR_GITHUB_USERNAME>/<YOUR_REPO_NAME>.git
 
-**Use your preferred IDE**
+# Verify remote URL:
+git remote -v
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+# Ensure you are on main branch:
+git branch -M main
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+# Push your code:
+git push -u origin main
 ```
 
-**Edit a file directly in GitHub**
+*(If prompted, authenticate using your GitHub Personal Access Token or browser login).*
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+---
 
-**Use GitHub Codespaces**
+### 3. Enable GitHub Pages Deployment via GitHub Actions
+Once the repository is pushed:
+1. In your GitHub repository, navigate to **Settings** (top menu).
+2. On the left sidebar, click **Pages**.
+3. Under **Build and deployment** > **Source**, change from `Deploy from a branch` to:
+   👉 **GitHub Actions**
+4. The workflow in `.github/workflows/deploy.yml` will automatically trigger and build the site on every push to `main`!
+5. You can monitor the deployment under the **Actions** tab.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+---
 
-## What technologies are used for this project?
+### 4. Custom Domain Setup (`solarsysllp.com`)
 
-This project is built with:
+The build automatically generates `CNAME` containing `solarsysllp.com` in `public/CNAME`.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+In your domain registrar (GoDaddy, Namecheap, Cloudflare, Hostinger, etc.), configure the following DNS records for **`solarsysllp.com`**:
 
-## How can I deploy this project?
+#### A Records (Apex Domain `@`):
+| Type | Host | Points To | TTL |
+| :--- | :--- | :--- | :--- |
+| **A** | `@` | `185.199.108.153` | 3600 (or Auto) |
+| **A** | `@` | `185.199.109.153` | 3600 (or Auto) |
+| **A** | `@` | `185.199.110.153` | 3600 (or Auto) |
+| **A** | `@` | `185.199.111.153` | 3600 (or Auto) |
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+#### CNAME Record (`www` subdomain):
+| Type | Host | Points To | TTL |
+| :--- | :--- | :--- | :--- |
+| **CNAME** | `www` | `<YOUR_GITHUB_USERNAME>.github.io` | 3600 (or Auto) |
 
-## Can I connect a custom domain to my Lovable project?
+#### Enforce HTTPS:
+Once DNS propagates (typically 5 to 30 minutes), go to **Settings** > **Pages** in your GitHub repo and check **Enforce HTTPS**.
 
-Yes, you can!
+---
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 🛠️ Local Development & Testing
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+```bash
+# Install dependencies
+npm install
+
+# Start development server (runs on http://localhost:8080)
+npm run dev
+
+# Run unit tests
+npm test
+
+# Run ESLint check
+npm run lint
+
+# Build production bundle
+npm run build
+```
+
+---
+
+## 📱 Mobile Responsiveness Features
+- **Adaptive Layouts**: Full viewport compatibility from small mobile devices (320px) up to ultra-wide 4K monitors.
+- **Fluid Navigation**: Responsive header with hamburger toggle for mobile/tablet screens and smooth anchor scrolling offset for fixed navbar.
+- **Touch-Friendly Controls**: Minimum 44px touch targets across buttons, links, and forms.
+- **Form Usability**: Styled inputs configured with proper font sizes to prevent iOS Safari auto-zoom.
+- **SPA Routing Fallback**: Automatic `404.html` generator ensures client-side routes (e.g. `/product/:id`) reload seamlessly on GitHub Pages.

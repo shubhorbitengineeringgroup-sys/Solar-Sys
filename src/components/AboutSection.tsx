@@ -64,7 +64,7 @@ const AboutSection = () => {
                 <div className="text-2xl sm:text-3xl font-heading font-black text-foreground mb-1 sm:mb-2">
                   <Counter target={stat.value} />
                 </div>
-                <div className="text-[10px] sm:text-xs text-muted-foreground uppercase tracking-wider sm:tracking-widest font-bold">
+                <div className="text-[10px] sm:text-xs text-muted-foreground uppercase tracking-wider sm:tracking-widest font-bold leading-tight sm:leading-normal">
                   {stat.label}
                 </div>
               </div>

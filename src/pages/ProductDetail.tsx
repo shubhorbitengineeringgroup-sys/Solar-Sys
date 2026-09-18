@@ -88,14 +88,14 @@ const ProductDetail = () => {
                 <h2 className="text-xl sm:text-2xl font-heading font-bold uppercase tracking-tight">Technical Specifications</h2>
               </div>
               <div className="overflow-x-auto rounded-2xl border border-border/50 bg-card/50 backdrop-blur-sm">
-                <table className="w-full text-left min-w-[320px]">
+                <table className="w-full text-left">
                   <tbody>
                     {Object.entries(product.specs).map(([label, value], index) => (
                       <tr key={label} className={index % 2 === 0 ? "bg-accent/5" : "bg-transparent"}>
-                        <td className="px-4 sm:px-6 py-3 sm:py-4 font-bold text-accent text-xs sm:text-sm uppercase tracking-wide border-b border-border/20 w-2/5 sm:w-1/3">
+                        <td className="px-3 sm:px-6 py-3 sm:py-4 font-bold text-accent text-xs sm:text-sm uppercase tracking-wide border-b border-border/20 w-2/5 sm:w-1/3 break-words">
                           {label}
                         </td>
-                        <td className="px-4 sm:px-6 py-3 sm:py-4 text-foreground text-xs sm:text-sm border-b border-border/20">
+                        <td className="px-3 sm:px-6 py-3 sm:py-4 text-foreground text-xs sm:text-sm border-b border-border/20 break-words">
                           {value}
                         </td>
                       </tr>
