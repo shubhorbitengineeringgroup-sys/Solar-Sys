@@ -24,6 +24,7 @@ export interface ProductDetail {
   image: string;
   lifespan: string;
   warranty: string;
+  technical?: string;
   types: ProductType[];
 }
 

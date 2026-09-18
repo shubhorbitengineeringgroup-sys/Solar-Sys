@@ -5,7 +5,7 @@ import { Counter } from "@/components/ui/counter";
 
 const HeroSection = () => {
   return (
-    <section id="home" className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden bg-[#0a0f18]">
+    <section id="home" className="relative min-h-[90vh] flex items-center pt-24 pb-16 sm:pt-28 sm:pb-20 overflow-hidden bg-[#0a0f18]">
       {/* Background Image Layer with Motion */}
       <div
         className="absolute inset-0 z-0 bg-cover bg-center opacity-30 scale-110 animate-pulse-slow"
@@ -14,16 +14,16 @@ const HeroSection = () => {
       <div className="absolute inset-0 backdrop-blur-[1px] bg-gradient-to-b from-[#0a0f18]/60 via-[#0a0f18] to-[#0a0f18] z-0" />
 
       {/* Background geometric accents */}
-      <div className="absolute top-1/4 -right-20 w-[600px] h-[600px] bg-accent/10 rounded-full blur-[120px] z-0 animate-blob" />
-      <div className="absolute -bottom-20 -left-20 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[100px] z-0 animate-blob animation-delay-2000" />
+      <div className="absolute top-1/4 -right-20 w-[600px] h-[600px] bg-accent/10 rounded-full blur-[120px] z-0 animate-blob pointer-events-none" />
+      <div className="absolute -bottom-20 -left-20 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[100px] z-0 animate-blob animation-delay-2000 pointer-events-none" />
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Two-column layout: Left text | Right image */}
         <div className="grid lg:grid-cols-2 gap-12 items-center">
 
           {/* LEFT — Text Content */}
-          <div className="space-y-10 opacity-0 animate-fade-up text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 px-6 py-2 rounded-full border border-white/10 bg-white/5 text-xs font-bold text-accent tracking-[.3em] uppercase backdrop-blur-md">
+          <div className="space-y-6 sm:space-y-10 opacity-0 animate-fade-up text-center lg:text-left">
+            <div className="inline-flex items-center gap-2 px-4 sm:px-6 py-1.5 sm:py-2 rounded-full border border-white/10 bg-white/5 text-[10px] sm:text-xs font-bold text-accent tracking-[.2em] sm:tracking-[.3em] uppercase backdrop-blur-md">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
@@ -31,42 +31,42 @@ const HeroSection = () => {
               Renewable Energy Excellence
             </div>
 
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-heading font-black leading-[1.05] text-white">
+            <h1 className="text-3xl sm:text-5xl lg:text-7xl font-heading font-black leading-[1.1] text-white">
               Illuminate Your <br />
               <span className="photon-gradient-text">Sustainable</span> Future
             </h1>
 
-            <p className="text-xl sm:text-2xl text-white/70 max-w-2xl leading-relaxed font-light">
+            <p className="text-base sm:text-xl lg:text-2xl text-white/70 max-w-2xl leading-relaxed font-light mx-auto lg:mx-0">
               SOLARSYS LLP transforms the way the world uses energy. We bridge the gap between
               innovation and accessibility with high-performance solar infrastructure
               engineered for the next generation.
             </p>
 
-            <div className="flex flex-wrap justify-center lg:justify-start gap-6 pt-4">
-              <a href="#contact">
-                <Button variant="photon" size="lg" className="h-16 px-12 text-xl rounded-full shadow-2xl shadow-accent/20 hover:shadow-accent/40 transition-all font-bold">
+            <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 sm:gap-6 pt-2 sm:pt-4 w-full sm:w-auto">
+              <a href="#contact" className="w-full sm:w-auto">
+                <Button variant="photon" size="lg" className="w-full sm:w-auto h-12 sm:h-16 px-8 sm:px-12 text-base sm:text-xl rounded-full shadow-2xl shadow-accent/20 hover:shadow-accent/40 transition-all font-bold">
                   Get Started
                 </Button>
               </a>
-              <a href="#about">
-                <Button variant="outline" size="lg" className="h-16 px-12 text-xl rounded-full border-white/20 text-white hover:bg-white/5 bg-transparent font-medium">
+              <a href="#about" className="w-full sm:w-auto">
+                <Button variant="outline" size="lg" className="w-full sm:w-auto h-12 sm:h-16 px-8 sm:px-12 text-base sm:text-xl rounded-full border-white/20 text-white hover:bg-white/5 bg-transparent font-medium">
                   Our Story
                 </Button>
               </a>
             </div>
 
-            <div className="grid grid-cols-3 gap-8 pt-10 border-t border-white/10">
+            <div className="grid grid-cols-3 gap-2 sm:gap-8 pt-8 sm:pt-10 border-t border-white/10">
               <div>
-                <div className="text-3xl sm:text-4xl font-bold text-white"><Counter target="15+" /></div>
-                <div className="text-sm text-white/50 uppercase tracking-widest mt-1">Years Exp</div>
+                <div className="text-2xl sm:text-4xl font-bold text-white"><Counter target="15+" /></div>
+                <div className="text-[10px] sm:text-sm text-white/50 uppercase tracking-wider sm:tracking-widest mt-1">Years Exp</div>
               </div>
               <div>
-                <div className="text-3xl sm:text-4xl font-bold text-white"><Counter target="500+" /></div>
-                <div className="text-sm text-white/50 uppercase tracking-widest mt-1">Projects</div>
+                <div className="text-2xl sm:text-4xl font-bold text-white"><Counter target="500+" /></div>
+                <div className="text-[10px] sm:text-sm text-white/50 uppercase tracking-wider sm:tracking-widest mt-1">Projects</div>
               </div>
               <div>
-                <div className="text-3xl sm:text-4xl font-bold text-white"><Counter target="99%" /></div>
-                <div className="text-sm text-white/50 uppercase tracking-widest mt-1">Reliability</div>
+                <div className="text-2xl sm:text-4xl font-bold text-white"><Counter target="99%" /></div>
+                <div className="text-[10px] sm:text-sm text-white/50 uppercase tracking-wider sm:tracking-widest mt-1">Reliability</div>
               </div>
             </div>
           </div>
